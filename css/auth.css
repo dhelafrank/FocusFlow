@@ -3,22 +3,35 @@
     text-align: left;
     width: 80vw;
     margin: 0;
-    padding:0;
+    padding: 0;
 }
-img{
-    width:85vw;
+
+img {
+    width: 85vw;
 }
-.btn{
-    width:80vw;
+
+.emphasy {
+    background-image: linear-gradient(to right, #1e90ff, #bc62ff);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.btn {
+    width: 80vw;
     height: 7vh;
-    border-radius:2rem;
+    border-radius: 2rem;
 }
-.signinSection{
+
+.signinSection {
     margin-top: 5vh;
 }
-.signinSection p{
-    color:var(--shade-two)
+
+.signinSection p {
+    color: var(--shade-two)
 }
-*{
+
+* {
     /* outline: 1px dashed red; */
 }
