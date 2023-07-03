@@ -48,7 +48,16 @@ header {
     display: flex;
     justify-content: space-between;
 }
-
+.quoteCard{
+    background: var(--shade-three);
+    padding: 0.5rem;
+    border-radius: 15px;
+    margin-top:2rem;
+}
+.quoteCard *{
+    text-align: center;
+    font-style: italic;
+}
 * {
     /* outline: 1px dashed red; */
 }

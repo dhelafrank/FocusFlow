@@ -65,6 +65,9 @@ p {
     color: var(--shade-three);
 
 }
+.btn-notActive:active{
+    background: var(--shade-three);
+}
 
 .flex {
     display: flex;
