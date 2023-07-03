@@ -1,0 +1,67 @@
+@import url("/css/theme.css") all;
+
+:root {
+    background-color: var(--dark-shade);
+}
+
+body {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.label {
+    font-size: 14px;
+}
+
+.caption {
+    font-size: 12px;
+}
+
+.btn {
+    border:1px solid #fff;
+    margin: 5px;
+    height:5vh;
+    background: none;
+    color: #fff;
+    border-radius:15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.btn-positive{
+    background: var(--primary-blue);
+    border:none;
+}
+.btn-positive:active{
+    background-color: var(--primary-blue-active);
+}
+.btn-alternate:active{
+    background: var(--shade-three);
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}

@@ -1,0 +1,24 @@
+.container h1 {
+    font-size: 40px;
+    text-align: left;
+    width: 80vw;
+    margin: 0;
+    padding:0;
+}
+img{
+    width:85vw;
+}
+.btn{
+    width:80vw;
+    height: 7vh;
+    border-radius:2rem;
+}
+.signinSection{
+    margin-top: 5vh;
+}
+.signinSection p{
+    color:var(--shade-two)
+}
+*{
+    /* outline: 1px dashed red; */
+}

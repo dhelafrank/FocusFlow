@@ -1,0 +1,18 @@
+:root{
+    --background:#1a1a1a;
+    --primary-blue:#1e90ff;
+    --primary-purple: #bc62ff;
+    --primary-yellow:#ffab1e;
+
+    --dark-shade:#1a1a1a;
+    --shade-three:#4f4f4f;
+    --shade-two:#7f7f7f;
+    --shade-one:#c1c1c1;
+
+    --big-border-r:24px;
+    --small-border-r:15px;
+
+    --primary-blue-active:#157ce2;
+
+    color:#fff;
+}
