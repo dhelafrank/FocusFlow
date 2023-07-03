@@ -92,7 +92,7 @@ p {
 
 .progressBar .outbar {
     width: 100%;
-    height: 6px;
+    height: 10px;
     background: var(--shade-one);
     border-radius: 3px;
     overflow: hidden;
