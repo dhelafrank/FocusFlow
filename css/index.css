@@ -57,6 +57,7 @@ header {
 .quoteCard *{
     text-align: center;
     font-style: italic;
+    font-size: 15px;
 }
 * {
     /* outline: 1px dashed red; */
