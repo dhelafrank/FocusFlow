@@ -56,6 +56,14 @@ p {
 .btn-alternate:active{
     background: var(--shade-three);
 }
+.btn-notActive{
+    border:none;
+    color: var(--shade-three);
+
+}
+.flex{
+    display: flex;
+}
 .flex-center {
     display: flex;
     align-items: center;

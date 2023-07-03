@@ -1,0 +1,52 @@
+.userAvatar {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.navGreeting h1 {
+    text-align: left;
+}
+
+.navGreeting .btn {
+    width: 35vw;
+}
+
+.navGreeting h1 {
+    font-size: 40px;
+    margin: 0;
+    border: 0;
+}
+
+.indicator {
+    font-weight: 600;
+}
+
+.buttonContainer {
+    margin: 0;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+.progressCard{
+    /* margin-top:2rem; */
+    background: var(--shade-three);
+    border-radius: 15px;
+    padding: 0.5rem;
+    height:18vh;
+}
+.progressCard *{
+    margin:3px;
+}
+.progressCard p{
+    color:var(--shade-one);
+    padding:0;
+    padding-top:0.5rem;
+    /* font-size: 15px; */
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+* {
+    /* outline: 1px dashed red; */
+}
