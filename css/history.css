@@ -1,0 +1,17 @@
+.fa-house+.dot {
+    display: none;
+}
+.navSearchSection{
+    margin-top:1rem;
+    display: flex;
+    flex-direction: column;
+}
+input[type="text"]{
+    width:90%;
+    padding:1.5em;
+    outline: none;
+    margin-bottom:1rem;
+}
+.buttonContainer .btn{
+width:7rem;
+}

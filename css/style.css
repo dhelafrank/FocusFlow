@@ -4,6 +4,15 @@
 :root {
     background-color: var(--dark-shade);
 }
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.userAvatar {
+    width: 40px;
+    border-radius: 50%;
+}
 
 body {
     padding-top: 0;
@@ -72,7 +81,15 @@ p {
     background: var(--shade-three);
     color:var(--shade-two);
 }
-
+.back-btn{
+    padding:1.3em 1em;
+}
+.component-grey-input{
+    background: #ffffff44;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem;
+}
 .flex {
     display: flex;
 }
