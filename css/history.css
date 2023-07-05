@@ -15,3 +15,11 @@ input[type="text"]{
 .buttonContainer .btn{
 width:7rem;
 }
+.historyCardsContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.historyCardContainer .taskCard{
+    height: 7vh;
+}
