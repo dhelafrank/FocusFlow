@@ -1,3 +1,3 @@
-document.getElementsByClassName("logout").addEventListener("click", ()=>{
+document.querySelector(".logout").addEventListener("click", ()=>{
     window.location.href = "/auth.html"
 })
