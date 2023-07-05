@@ -10,6 +10,7 @@ body {
     padding-bottom: 0;
     padding-left: 1em;
     padding-right: 1em;
+    margin-bottom: 5rem;
 }
 
 h1 {
@@ -66,7 +67,8 @@ p {
     color: var(--shade-three);
 
 }
-.btn-notActive:active{
+
+.btn-notActive:active {
     background: var(--shade-three);
 }
 
@@ -110,19 +112,42 @@ p {
     border-radius: 3px;
     background-color: var(--primary-blue);
 }
-.progressBar h3{
+
+.progressBar h3 {
     text-align: left;
     width: 100%;
 }
-.component-grey-card{
+
+.component-grey-card {
     background: var(--shade-three);
     padding: 0.5rem;
     border-radius: 15px;
-    margin-top:2rem;
-    box-shadow:0px 0px 5px #000;
+    margin-top: 2rem;
+    box-shadow: 0px 0px 5px #000;
 }
-*{
+
+* {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--dark-shade);
+}
+
+footer .fa-plus {
+    font-size: 1.5rem;
+    padding: 1rem 1.1rem;
+    border-radius: 50%;
+    background: var(--primary-blue);
 }
