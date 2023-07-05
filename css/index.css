@@ -114,6 +114,55 @@ padding-bottom: 5px;
 text-align: center;
 width:25%;
 }
+
+
+
+/* Progress card section styling */
+.categoryCardProgress .outbar{
+    margin:0;
+}
+.categoryCard-sect1 .caption{
+    color: var(--shade-one);
+}
+.categoryCard-sect1 .fa-solid{
+   padding: 12px;
+   border-radius: 10px;
+}
+
+.progressCard1 .fa-solid{
+    background:var(--primary-blue);;
+}
+
+.progressCard2 .fa-solid{
+    background:var(--primary-yellow)
+}
+.progressCard2 .progressBarIndicator{
+background: var(--primary-yellow);
+}
+.progressCard2 .categoryCardProgress .progressBar .inbar{
+background: var(--primary-yellow);
+}
+
+
+.progressCard3 .fa-solid{
+    background:var(--primary-purple)
+}
+.progressCard3 .progressBarIndicator{
+background: var(--primary-purple);
+}
+.progressCard3 .categoryCardProgress .progressBar .inbar{
+background: var(--primary-purple);
+}
+
+.progressCard4 .fa-solid{
+    background:var(--primary-green)
+}
+.progressCard4 .progressBarIndicator{
+background: var(--primary-green);
+}
+.progressCard4 .categoryCardProgress .progressBar .inbar{
+background: var(--primary-green);
+}
 * {
     /* outline: 1px dashed red; */
 }
