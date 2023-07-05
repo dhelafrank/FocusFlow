@@ -163,6 +163,11 @@ background: var(--primary-green);
 .progressCard4 .categoryCardProgress .progressBar .inbar{
 background: var(--primary-green);
 }
+
+
+.fa-clipboard + .dot{
+display: none;
+}
 * {
     /* outline: 1px dashed red; */
 }
