@@ -1,0 +1,26 @@
+.dot{
+    display: none;
+}
+.userCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:10vh;
+}
+.userName{
+    font-size:3rem;
+    margin:0;
+    padding: 0;
+    line-height: 3rem;
+}
+.avatar{
+width:40vw;
+border-radius: 50%;
+}
+.logout{
+    margin-top:10vh;
+    font-weight: 700;
+    color:var(--shade-two);
+    text-align:center;
+}
