@@ -1,13 +1,14 @@
 .container h1 {
-    font-size: 40px;
+    font-size: 3rem;
     text-align: left;
-    width: 100vw;
+    width: 80vw;
+    line-height: 3.3rem;
     margin: 0;
     padding: 0;
-    padding-left: 1em;
-    background-image:url("/Asset/blob1.svg");
+    /* padding-left: 1em; */
+    /* background-image:url("/Asset/blob1.svg");
     background-repeat: no-repeat;
-    background-position: 6em;
+    background-position: 6em; */
 }
 
 img {
@@ -33,7 +34,9 @@ img {
 }
 
 .signinSection p {
-    color: var(--shade-two)
+    color: var(--shade-two);
+    width:100vw;
+    text-align: center;
 }
 #blob{
     position: fixed;
