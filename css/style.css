@@ -1,4 +1,5 @@
 @import url("/css/theme.css") all;
+@import url("/css/toggler.css") all;
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
@@ -59,12 +60,12 @@ p {
 }
 
 .btn-positive {
-    background: var(--primary-blue);
+    background: var(--main-color);
     border: none;
 }
 
 .btn-positive:active {
-    background-color: var(--primary-blue-active);
+    background-color: var(--main-color-active);
 }
 
 .btn-alternate:active {
@@ -128,7 +129,7 @@ p {
     margin: 0;
     padding: 0;
     border-radius: 3px;
-    background-color: var(--primary-blue);
+    background-color: var(--main-color);
 }
 
 .progressBar h3 {
@@ -170,13 +171,13 @@ footer .fa-plus {
     font-size: 1.5rem;
     padding: 1rem 1.1rem;
     border-radius: 50%;
-    background: var(--primary-blue);
+    background: var(--main-color);
 }
 .completedTaskCard{
     border:1px solid var(--primary-light-green)
 }
 .dot{
-    background: var(--primary-blue);
+    background: var(--main-color);
     padding: 2px;
     border-radius: 50%;
     margin-top: 10px;

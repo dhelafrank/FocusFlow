@@ -102,7 +102,7 @@ header {
     width:70%;
 }
 .progressBarIndicator{
-background: var(--primary-blue);
+background: var(--main-color);
 border-radius: 1rem;
 font-size: 12px;
 font-weight: 600;
@@ -127,7 +127,7 @@ width:25%;
 }
 
 .progressCard1 .fa-solid{
-    background:var(--primary-blue);;
+    background:var(--main-color);
 }
 
 .progressCard2 .fa-solid{

@@ -24,3 +24,13 @@ border-radius: 50%;
     color:var(--shade-two);
     text-align:center;
 }
+.settingsCard{
+    width:100%;
+}
+.eachSettingCard{
+    justify-content: space-between;
+    width:100%;
+}
+*{
+    /* outline:1px dashed red; */
+}

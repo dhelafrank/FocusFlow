@@ -1,6 +1,6 @@
 :root{
+    --main-color:#1e90ff;
     --background:#1a1a1a;
-    --primary-blue:#1e90ff;
     --primary-purple: #bc62ff;
     --primary-yellow:#ffab1e;
     --primary-green:#45c930;
@@ -14,7 +14,7 @@
     --big-border-r:24px;
     --small-border-r:15px;
 
-    --primary-blue-active:#157ce2;
+    --main-color-active:#157ce2;
 
     color:#fff;
     font-family: Poppins, 'sans-serif';

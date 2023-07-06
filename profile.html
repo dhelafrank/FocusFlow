@@ -10,15 +10,25 @@
     <link rel="stylesheet" href="/css/profile.css">
     <script src="https://kit.fontawesome.com/63483fd584.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="userCard">
-        <img src="/Asset/avatar.jpeg" alt=""class="avatar">
+        <img src="/Asset/avatar.jpeg" alt="" class="avatar">
         <h1 class="userName">John Doe</h1>
         <p class="userEmail">johndoe@email.com</p>
     </div>
-    <div class="settingsCard">
-        <div class="component-grey-card">
+
+    <div class="settingsCard flex-center">
+        <div class="component-grey-card eachSettingCard flex-center">
             <p>Notifications</p>
+
+            <label class="toggler-wrapper style-1">
+                <input type="checkbox">
+                <div class="toggler-slider">
+                    <div class="toggler-knob"></div>
+                </div>
+            </label>
+
         </div>
     </div>
 
@@ -42,4 +52,5 @@
     </footer>
     <script src="/js/profile.js"></script>
 </body>
+
 </html>
