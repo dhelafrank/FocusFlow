@@ -177,6 +177,10 @@ footer .fa-plus {
     background: var(--main-color);
     
 }
+footer .fa-solid:active{
+/* background: var(--shade-two); */
+box-shadow: 0px 0px 40px var(--main-color);
+}
 .completedTaskCard{
     border:1px solid var(--primary-light-green)
 }
