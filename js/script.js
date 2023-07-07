@@ -10,7 +10,12 @@ historyNavIcon.forEach(icon => {
 
 homeIcon.forEach(icon => {
     icon.addEventListener("click", () => {
-        window.location.href = "/"
+        if(document.title.toLowerCase().includes("home")){
+            window.scrollTo({top:0, behavior:'smooth'})
+        }
+        else{
+            window.location.href = "/"
+        }
     })
 })
 

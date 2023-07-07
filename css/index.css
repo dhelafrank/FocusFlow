@@ -110,7 +110,7 @@ header {
     align-items: center;
 }
 
-.categoryContainer .component-grey-card .categoryCardProgress .progressBar {
+.categories .component-grey-card .categoryCardProgress .progressBar {
     width: 70%;
 }
 
@@ -203,26 +203,10 @@ header {
 
 .feedsContainer .caption {
     margin-bottom: 2rem;
-}
-
-.homeMain {
-    /* width: 100vw; */
-    /* overflow: hidden; */
-    /* overflow:visible; */
-    /* scroll-snap-align:initial; */
-}
-.show{
-    /* display:grid; */
-}
-
-.homeMainCategoryContainer section {
-    /* width: 90vw; */
-    /* display: inline; */
-    /* margin-right:3rem; */
-}
-.homeMainCategoryContainer{
-    /* display: flex; */
-    /* width: 200vw; */
+    font-size: 2rem;
+    background-image: linear-gradient(to bottom, var(--dark-shade), var(--dark-shade), #00000000);
+    position:sticky;
+    top:0;
 }
 * {
     /* outline: 1px dashed red; */
