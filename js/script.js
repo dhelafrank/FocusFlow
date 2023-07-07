@@ -53,6 +53,6 @@ let newTaskForm = `
 
 newTaskButton.forEach(icon => {
     icon.addEventListener("click", () => {
-        
+        document.insertAdjacentHTML('afterbegin', newTaskForm)
     })
 })
