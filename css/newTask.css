@@ -1,0 +1,79 @@
+.newTaskDivContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    z-index:5;
+}
+
+.newTaskDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 1em;
+    outline: none;
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.taskTitle::placeholder {
+    color: white;
+}
+
+.taskTitle::placeholder,
+.taskTitle:-ms-input-placeholder {
+    opacity: 1;
+    color: white;
+}
+
+select {
+    width: 100%;
+    padding: 1em;
+    background: var(--shade-two);
+    outline: none;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+input[type="time"] {
+    width: 50%;
+    height: 3rem;
+    border-radius: 15px;
+    border: none;
+    background: var(--shade-two);
+    outline: none;
+    font-size: 1.2rem;
+    color: white;
+}
+
+textarea {
+    width: 85%;
+    padding: 1em;
+    outline: none;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    background: var(--shade-two);
+    font-size: 1.2rem;
+    font-family: 'poppins', sans-serif;
+}
+
+button {
+    margin-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+*{
+    /* outline: 1px dashed red; */
+}

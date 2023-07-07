@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url("/css/theme.css") all;
+@import url("/css/newTask.css") all;
 /* @import url("/css/toggler.css") all; */
 
 :root {
@@ -59,6 +60,7 @@ p {
     border-radius: 15px;
     font-size: 16px;
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-positive {
