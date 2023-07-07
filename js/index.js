@@ -1,5 +1,4 @@
 function switchToOverview(){
-    // alert("switching to overview")
     document.querySelector(".main").style = "transform: translateX(0);"
     document.querySelector(".btn-upcoming").classList.remove("btn-positive")
     document.querySelector(".btn-upcoming").classList.add("btn-notActive")
@@ -8,8 +7,6 @@ function switchToOverview(){
 }
 
 function switchToUpcoming(){
-    // alert("switching to upcoming")
-    // document.querySelector(".main").scrollTo({right:0, behavior:'smooth'})
     document.querySelector(".main").style = "transform: translateX(-95vw);"
     document.querySelector(".btn-upcoming").classList.add("btn-positive")
     document.querySelector(".btn-upcoming").classList.remove("btn-notActive")

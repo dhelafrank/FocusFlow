@@ -1,6 +1,7 @@
 let historyNavIcon = document.querySelectorAll(".fa-clipboard")
 let userAvatar = document.querySelectorAll(".userAvatar")
 let homeIcon = document.querySelectorAll(".fa-house")
+let backBtn = document.querySelectorAll(".back-btn")
 
 historyNavIcon.forEach(icon => {
     icon.addEventListener("click", () => {
@@ -22,5 +23,11 @@ homeIcon.forEach(icon => {
 userAvatar.forEach(icon => {
     icon.addEventListener("click", () => {
         window.location.href = "/profile.html"
+    })
+})
+
+backBtn.forEach(icon => {
+    icon.addEventListener("click", () => {
+        history.back()
     })
 })
