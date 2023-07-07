@@ -1,6 +1,6 @@
-@import url("/css/theme.css") all;
-@import url("/css/toggler.css") all;
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("/css/theme.css") all;
+/* @import url("/css/toggler.css") all; */
 
 :root {
     background-color: var(--dark-shade);
