@@ -1,4 +1,3 @@
-
 .navGreeting h1 {
     text-align: left;
 }
@@ -19,150 +18,211 @@
 
 .buttonContainer {
     margin: 0;
-    margin-top:1rem;
-    margin-bottom:1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
-.progressCard{
+
+.progressCard {
     /* margin-top:2rem; */
     /* background: var(--shade-three);
     border-radius: 15px;
     padding: 0.7rem;
     padding-bottom: 0; */
     /* height:19vh; */
-    padding-bottom:1rem;
+    padding-bottom: 1rem;
 }
-.progressCard *{
-    margin:3px;
+
+.progressCard * {
+    margin: 3px;
 }
-.progressCard p{
-    color:var(--shade-one);
-    padding:0;
-    padding-top:0.5rem;
+
+.progressCard p {
+    color: var(--shade-one);
+    padding: 0;
+    padding-top: 0.5rem;
     margin-bottom: 1.5rem;
     /* font-size: 15px; */
 }
+
 header {
     display: flex;
     justify-content: space-between;
 }
 
-.quoteCard *{
+.quoteCard * {
     text-align: center;
     /* font-style: italic; */
     font-size: 15px;
     font-weight: 600;
 }
-.categoryContainer{
+
+.categoryContainer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
-.categories{
+
+.categories {
     margin-top: 4rem;
 }
-.categoryContainer h3{
-    margin:0;
+
+.categoryContainer h3 {
+    margin: 0;
     padding: 0;
     line-height: 18px;
 }
-.categoryContainer .caption{
+
+.categoryContainer .caption {
     margin: 0;
     padding: 0;
 }
-.categoryContainer .component-grey-card{
-    width:43vw;
+
+.categoryContainer .component-grey-card {
+    width: 43vw;
     height: 35vw;
-    margin:0;
+    margin: 0;
     padding: 0;
     margin-bottom: 1rem;
     border-radius: 25px;
 }
-.categoryContainer .component-grey-card{
-    padding-left:0.5rem;
-    padding-right:0.5rem;
+
+.categoryContainer .component-grey-card {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     box-sizing: border-box;
     overflow: hidden;
 }
-.categoryContainer .component-grey-card .categoryCard-sect1{
-    padding-top:1rem;
+
+.categoryContainer .component-grey-card .categoryCard-sect1 {
+    padding-top: 1rem;
     margin: 0;
 }
-.categoryContainer .component-grey-card .categoryCard-sect1 h3{
-    margin:0;
+
+.categoryContainer .component-grey-card .categoryCard-sect1 h3 {
+    margin: 0;
     padding: 0;
 }
-.categoryCardProgress{
+
+.categoryCardProgress {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.categoryContainer .component-grey-card .categoryCardProgress .progressBar{
-    width:70%;
+
+.categoryContainer .component-grey-card .categoryCardProgress .progressBar {
+    width: 70%;
 }
-.progressBarIndicator{
-background: var(--main-color);
-border-radius: 1rem;
-font-size: 12px;
-font-weight: 600;
-padding-top: 5px;
-padding-bottom: 5px;
-text-align: center;
-width:25%;
+
+.progressBarIndicator {
+    background: var(--main-color);
+    border-radius: 1rem;
+    font-size: 12px;
+    font-weight: 600;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    width: 25%;
 }
 
 
 
 /* Progress card section styling */
-.categoryCardProgress .outbar{
-    margin:0;
+.categoryCardProgress .outbar {
+    margin: 0;
 }
-.categoryCard-sect1 .caption{
+
+.categoryCard-sect1 .caption {
     color: var(--shade-one);
 }
-.categoryCard-sect1 .fa-solid{
-   padding: 12px;
-   border-radius: 10px;
+
+.categoryCard-sect1 .fa-solid {
+    padding: 12px;
+    border-radius: 10px;
 }
 
-.progressCard1 .fa-solid{
-    background:var(--main-color);
+.progressCard1 .fa-solid {
+    background: var(--main-color);
 }
 
-.progressCard2 .fa-solid{
-    background:var(--primary-yellow)
-}
-.progressCard2 .progressBarIndicator{
-background: var(--primary-yellow);
-}
-.progressCard2 .categoryCardProgress .progressBar .inbar{
-background: var(--primary-yellow);
+.progressCard2 .fa-solid {
+    background: var(--primary-yellow)
 }
 
-
-.progressCard3 .fa-solid{
-    background:var(--primary-purple)
-}
-.progressCard3 .progressBarIndicator{
-background: var(--primary-purple);
-}
-.progressCard3 .categoryCardProgress .progressBar .inbar{
-background: var(--primary-purple);
+.progressCard2 .progressBarIndicator {
+    background: var(--primary-yellow);
 }
 
-.progressCard4 .fa-solid{
-    background:var(--primary-green)
-}
-.progressCard4 .progressBarIndicator{
-background: var(--primary-green);
-}
-.progressCard4 .categoryCardProgress .progressBar .inbar{
-background: var(--primary-green);
+.progressCard2 .categoryCardProgress .progressBar .inbar {
+    background: var(--primary-yellow);
 }
 
 
-.fa-clipboard + .dot{
-display: none;
+.progressCard3 .fa-solid {
+    background: var(--primary-purple)
+}
+
+.progressCard3 .progressBarIndicator {
+    background: var(--primary-purple);
+}
+
+.progressCard3 .categoryCardProgress .progressBar .inbar {
+    background: var(--primary-purple);
+}
+
+.progressCard4 .fa-solid {
+    background: var(--primary-green)
+}
+
+.progressCard4 .progressBarIndicator {
+    background: var(--primary-green);
+}
+
+.progressCard4 .categoryCardProgress .progressBar .inbar {
+    background: var(--primary-green);
+}
+
+
+.fa-clipboard+.dot {
+    display: none;
+}
+
+.upcoming{
+    /* display: none; */
+}
+.upcomingTasksCard {
+    border: 1px solid var(--main-color);
+    box-shadow: none;
+    margin: 0.5rem auto 0.5rem auto;
+    padding: auto;
+}
+
+.upcomingTasksCard * {
+    font-size: 1rem;
+}
+
+.feedsContainer .caption {
+    margin-bottom: 2rem;
+}
+
+.homeMain {
+    /* width: 100vw; */
+    /* overflow: hidden; */
+    /* overflow:visible; */
+    /* scroll-snap-align:initial; */
+}
+.show{
+    /* display:grid; */
+}
+
+.homeMainCategoryContainer section {
+    /* width: 90vw; */
+    /* display: inline; */
+    /* margin-right:3rem; */
+}
+.homeMainCategoryContainer{
+    /* display: flex; */
+    /* width: 200vw; */
 }
 * {
     /* outline: 1px dashed red; */

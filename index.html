@@ -24,8 +24,8 @@
     <div class="navGreeting flex  flex-column">
         <h1>Hello<br><span>John Doe</span></h1>
         <div class="buttonContainer">
-            <button class="btn btn-positive">Overview</button>
-            <button class="btn btn-notActive">Upcoming</button>
+            <button class="btn btn-positive" onclick="switchToOverview()">Overview</button>
+            <button class="btn btn-notActive" onclick="switchToUpcoming()">Upcoming</button>
         </div>
     </div>
 
@@ -45,89 +45,140 @@
         <p class="qoute label quote-author"> John Doe</p>
     </div>
 
-    <section class="categories">
-        <h2>Categories</h2>
-        <div class="categoryContainer">
+    <section class="homeMain">
+        <div class="homeMainCategoryContainer">
+            <section class="categories">
+                <h2>Categories</h2>
+                <div class="categoryContainer">
 
-            <div class="component-grey-card progressCard1">
-                <div class="categoryCard-sect1">
-                    <i class="fa-solid fa-book"></i>
-                    <p class="caption"> 5 New</p>
-                    <h3>Books</h3>
-                </div>
-                <div class="categoryCardProgress">
-                    <div class="progressBar">
-                        <div class="outbar">
-                            <div class="inbar"></div>
+                    <div class="component-grey-card progressCard1">
+                        <div class="categoryCard-sect1">
+                            <i class="fa-solid fa-book"></i>
+                            <p class="caption"> 5 New</p>
+                            <h3>Books</h3>
+                        </div>
+                        <div class="categoryCardProgress">
+                            <div class="progressBar">
+                                <div class="outbar">
+                                    <div class="inbar"></div>
+                                </div>
+                            </div>
+                            <p class="progressBarIndicator">
+                                9/24
+                            </p>
                         </div>
                     </div>
-                    <p class="progressBarIndicator">
-                        9/24
-                    </p>
-                </div>
-            </div>
 
 
-            <div class="component-grey-card progressCard2">
-                <div class="categoryCard-sect1">
-                    <i class="fa-solid fa-bookmark"></i>
-                    <p class="caption"> 5 New</p>
-                    <h3>Assignment</h3>
-                </div>
-                <div class="categoryCardProgress">
-                    <div class="progressBar">
-                        <div class="outbar">
-                            <div class="inbar"></div>
+                    <div class="component-grey-card progressCard2">
+                        <div class="categoryCard-sect1">
+                            <i class="fa-solid fa-bookmark"></i>
+                            <p class="caption"> 5 New</p>
+                            <h3>Assignment</h3>
+                        </div>
+                        <div class="categoryCardProgress">
+                            <div class="progressBar">
+                                <div class="outbar">
+                                    <div class="inbar"></div>
+                                </div>
+                            </div>
+                            <p class="progressBarIndicator">
+                                9/24
+                            </p>
                         </div>
                     </div>
-                    <p class="progressBarIndicator">
-                        9/24
-                    </p>
-                </div>
-            </div>
 
 
-            <div class="component-grey-card progressCard3">
-                <div class="categoryCard-sect1">
-                    <i class="fa-solid fa-square-check"></i>
-                    <p class="caption"> 5 New</p>
-                    <h3>Projects</h3>
-                </div>
-                <div class="categoryCardProgress">
-                    <div class="progressBar">
-                        <div class="outbar">
-                            <div class="inbar"></div>
+                    <div class="component-grey-card progressCard3">
+                        <div class="categoryCard-sect1">
+                            <i class="fa-solid fa-square-check"></i>
+                            <p class="caption"> 5 New</p>
+                            <h3>Projects</h3>
+                        </div>
+                        <div class="categoryCardProgress">
+                            <div class="progressBar">
+                                <div class="outbar">
+                                    <div class="inbar"></div>
+                                </div>
+                            </div>
+                            <p class="progressBarIndicator">
+                                9/24
+                            </p>
                         </div>
                     </div>
-                    <p class="progressBarIndicator">
-                        9/24
-                    </p>
-                </div>
-            </div>
 
 
-            <div class="component-grey-card progressCard4">
-                <div class="categoryCard-sect1">
-                    <i class="fa-solid fa-bell"></i>
-                    <p class="caption"> 5 New</p>
-                    <h3>Extras</h3>
-                </div>
-                <div class="categoryCardProgress">
-                    <div class="progressBar">
-                        <div class="outbar">
-                            <div class="inbar"></div>
+                    <div class="component-grey-card progressCard4">
+                        <div class="categoryCard-sect1">
+                            <i class="fa-solid fa-bell"></i>
+                            <p class="caption"> 5 New</p>
+                            <h3>Extras</h3>
+                        </div>
+                        <div class="categoryCardProgress">
+                            <div class="progressBar">
+                                <div class="outbar">
+                                    <div class="inbar"></div>
+                                </div>
+                            </div>
+                            <p class="progressBarIndicator">
+                                9/24
+                            </p>
                         </div>
                     </div>
-                    <p class="progressBarIndicator">
-                        9/24
-                    </p>
-                </div>
-            </div>
-        </div>
 
+                </div>
+            </section>
+            <section class="upcoming">
+                <div class="component-grey-card upcomingTasksContainer">
+                    <h3>
+                        Upcoming Tasks
+                        <div class="component-grey-card upcomingTasksCard">
+                            <p>Fixing Some Bugs in project code<p>
+                        </div>
+                        <div class="component-grey-card upcomingTasksCard">
+                            <p>Completing Assignment questions<p>
+                        </div>
+                        <div class="component-grey-card upcomingTasksCard">
+                            <p>Attending the maths webinar<p>
+                        </div>
+                    </h3>
+                </div>
+
+                <div class="feedsContainer">
+                    <p class="caption">Feeds for you</p>
+
+
+                    <div class="blogContainer">
+                        <div class="blogImgContainer">
+                            <img src="/Asset/imgPlaceholder.jpg" alt="" srcset="">
+                        </div>
+                        <p class="blogHeading">Troll Cave</p>
+                        <p class="blogSummary">
+                            Even during the daytime a troll cave is dark because the trolls keeps the blinds pulled
+                            down...
+                        </p>
+                    </div>
+
+                    <div class="blogContainer">
+                        <div class="blogImgContainer">
+                            <img src="/Asset/imgPlaceholder.jpg" alt="" srcset="">
+                        </div>
+                        <p class="blogHeading">Caradhras Iceberg</p>
+                        <p class="blogSummary">
+                            Below the snowline, Caradhras is described as having dull red slopes, "as if stained
+                            with blood"...
+                        </p>
+                    </div>
+                </div>
+
+            </section>
 
         </div>
     </section>
+
+
+
+
 
 
     <footer>
@@ -144,6 +195,7 @@
 
 
     <script src="/js/script.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>

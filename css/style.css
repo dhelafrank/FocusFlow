@@ -162,6 +162,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100vw;
     background-image: linear-gradient(to top, var(--dark-shade), var(--dark-shade), var(--dark-shade), #ffffff00);
 }
 footer .fa-solid{
@@ -173,6 +174,7 @@ footer .fa-plus {
     padding: 1rem 1.1rem;
     border-radius: 50%;
     background: var(--main-color);
+    
 }
 .completedTaskCard{
     border:1px solid var(--primary-light-green)
@@ -184,4 +186,26 @@ footer .fa-plus {
     margin-top: 10px;
     position: absolute;
     bottom:4px;
+}
+
+.feedsContainer{
+    margin-top:5vh;
+}
+.feedsContainer p{
+    padding-left: 0.5rem;
+}
+.blogContainer p{
+font-size: 1rem;
+}
+.blogImgContainer{
+    overflow: hidden;
+    height: 25vh;
+    border-radius: 15px;
+}
+.blogImgContainer img{
+    object-fit:cover;
+    width: 100%;
+}
+.blogContainer{
+    margin-bottom:2rem;
 }
