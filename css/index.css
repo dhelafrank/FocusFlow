@@ -208,6 +208,30 @@ header {
     position:sticky;
     top:0;
 }
+.main{
+    display: flex;
+    flex-wrap: nowrap;
+    width:190vw;
+    transition: 1s all ease-in-out;
+    /* box-shadow: 0px 0px 50px var(--dark-shade); */
+    /* background: var(--background); */
+    background: transparent;
+}
+.main .component-grey-card{
+    box-shadow: none;
+}
+.mainContainer{
+    width: 93vw;
+    overflow: hidden;
+    box-shadow: 0px 0px 50px var(--background);
+    /* background: var(--dark-shade); */
+    /* background: var(--background); */
+    background: transparent;
+}
+.main section{
+width: 90vw;
+margin-right: 2rem;
+}
 * {
     /* outline: 1px dashed red; */
 }
