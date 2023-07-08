@@ -205,7 +205,8 @@ header {
 .feedsContainer .caption {
     margin-bottom: 2rem;
     font-size: 2rem;
-    background-image: linear-gradient(to bottom, var(--dark-shade), var(--dark-shade), #00000000);
+    /* background-image: linear-gradient(to bottom, var(--dark-shade), var(--dark-shade), #00000000); */
+    background: var(--background);
     position: sticky;
     top: 0;
 }

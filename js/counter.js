@@ -137,4 +137,3 @@ class Counter extends Screen {
 // Instantiate the Counter class...
 // const counter = new Counter(".clients");
 // const counter2 = new Counter(".years");
-const counter3 = new Counter(".progressPercentage");
