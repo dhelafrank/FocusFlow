@@ -53,6 +53,6 @@ let newTaskForm = `
 
 newTaskButton.forEach(icon => {
     icon.addEventListener("click", () => {
-        
+        dpcu.insertAdjacentHTML("afterbegin", htmlContent);
     })
 })
