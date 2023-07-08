@@ -12,10 +12,12 @@ historyNavIcon.forEach(icon => {
 
 homeIcon.forEach(icon => {
     icon.addEventListener("click", () => {
-        if(document.title.toLowerCase().includes("home")){
-            window.scrollTo({top:0, behavior:'smooth'})
-        }
-        else{
+        if (document.title.toLowerCase().includes("home")) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        } else {
             window.location.href = "/"
         }
     })
@@ -53,6 +55,12 @@ let newTaskForm = `
 
 newTaskButton.forEach(icon => {
     icon.addEventListener("click", () => {
-        dpcu.insertAdjacentHTML("afterbegin", htmlContent);
+        // console.log("newTaskClicked");
+        document.body.insertAdjacentHTML("afterbegin", newTaskForm);
+        window.addEventListener("scroll", () => {
+            // document.querySelector(".newTaskDivContainer").style.display = "none"
+            document.querySelector(".newTaskDivContainer").remove()
+        })
+
     })
 })

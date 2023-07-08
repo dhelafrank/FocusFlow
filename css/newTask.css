@@ -2,8 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
-    z-index:5;
+    height: 96.7vh;
+    width:100vw;
+    background: var(--background);
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index:10;
 }
 
 .newTaskDiv {
@@ -11,6 +17,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* backdrop-filter: blur(10px); */
+    /* -webkit-backdrop-filter: blur(10px); */
 }
 
 input[type="text"] {
