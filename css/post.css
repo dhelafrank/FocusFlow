@@ -9,7 +9,7 @@ body{
     border-radius: auto 15px 15px 15px;
     overflow: hidden;
     background: url("/Asset/imgPlaceholder.webp");
-    box-shadow:0px 20px 50px var(--background) inset;
+    box-shadow: 0px -10px 10px 0px var(--background) inset;
     background-attachment: fixed;
 }
 .blogTitleContainer, .blogContentContainer{
