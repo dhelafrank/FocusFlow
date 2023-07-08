@@ -34,7 +34,13 @@
         <h2>Daily progress</h2>
         <p class="label">Here you can see your daily task</p>
         <div class="progressBar">
-            <h3>76%</h3>
+            <h3><span 
+            class="progressPercentage"
+            data-counter-min="0" 
+            data-counter-max="76" 
+            data-counter-speed="25" 
+            data-counter-increment="1" 
+            data-counter-delay="0"></span>%</h3>
             <div class="outbar">
                 <div class="inbar"></div>
             </div>
@@ -176,6 +182,8 @@
     <script src="/js/index.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/postFetching.js"></script>
+    <script src="/js/counter.js"></script>
+
 </body>
 
 </html>
