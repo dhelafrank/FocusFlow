@@ -53,11 +53,26 @@ let newTaskForm = `
     </div>
 </div>`
 
+
 newTaskButton.forEach(icon => {
     icon.addEventListener("click", () => {
         document.body.insertAdjacentHTML("afterbegin", newTaskForm);
+        let newTaskContainer =  document.querySelector(".newTaskDivContainer")
+        setTimeout(() => {
+            newTaskContainer.style.opacity = "1";
+        }, 1)
+
         window.addEventListener("scroll", () => {
-            document.querySelector(".newTaskDivContainer").remove()
+            if (document.contains(newTaskContainer)) {
+                newTaskContainer.style.opacity = "0";
+                setTimeout(() => {
+                    newTaskContainer.remove()
+                }, 600)
+            }
+            else{
+                return;
+            }
+
         })
         document.insertAdjacentHTML('afterbegin', newTaskForm)
     })

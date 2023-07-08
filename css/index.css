@@ -214,7 +214,7 @@ header {
     display: flex;
     flex-wrap: nowrap;
     width: 190vw;
-    transition: 1s all ease-in-out;
+    transition: 0.5s all ease-in-out;
     /* box-shadow: 0px 0px 50px var(--dark-shade); */
     /* background: var(--background); */
     background: transparent;
@@ -225,7 +225,7 @@ header {
 }
 
 .mainContainer {
-    width: 93vw;
+    width: 90vw;
     overflow: hidden;
     box-shadow: 0px 0px 50px var(--background);
     /* background: var(--dark-shade); */

@@ -12,5 +12,4 @@ function switchToUpcoming(){
     document.querySelector(".btn-upcoming").classList.remove("btn-notActive")
     document.querySelector(".btn-overview").classList.add("btn-notActive")
     document.querySelector(".btn-overview").classList.remove("btn-positive")
-    console.log("done");
 }
