@@ -214,6 +214,9 @@ font-size: 1rem;
     object-fit:cover;
     width: 100%;
 }
+.blogHeading{
+    font-weight: 600;
+}
 .blogContainer{
     margin-bottom:2rem;
 }
