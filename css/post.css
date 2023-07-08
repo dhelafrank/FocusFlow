@@ -25,6 +25,9 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+.dot{
+    display: none;
+}
 h3{
     font-weight: 500;
 }
