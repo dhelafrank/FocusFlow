@@ -32,13 +32,13 @@ input[type="text"] {
 }
 
 .taskTitle::placeholder {
-    color: white;
+    color: rgba(255, 255, 255, 0.349);
 }
 
 .taskTitle::placeholder,
 .taskTitle:-ms-input-placeholder {
     opacity: 1;
-    color: white;
+    color: rgba(255, 255, 255, 0.459);
 }
 
 select {

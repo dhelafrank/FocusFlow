@@ -55,10 +55,8 @@ let newTaskForm = `
 
 newTaskButton.forEach(icon => {
     icon.addEventListener("click", () => {
-        // console.log("newTaskClicked");
         document.body.insertAdjacentHTML("afterbegin", newTaskForm);
         window.addEventListener("scroll", () => {
-            // document.querySelector(".newTaskDivContainer").style.display = "none"
             document.querySelector(".newTaskDivContainer").remove()
         })
         document.insertAdjacentHTML('afterbegin', newTaskForm)
