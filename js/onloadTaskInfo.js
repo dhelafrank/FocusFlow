@@ -1,17 +1,17 @@
-fetch("/docs/taskInfo.json", {
-        method: "GET",
-    })
-    .then(response => response.json())
-    .then(data => {
-        // console.log(JSON.stringify(data))
-        taskInfo = data
-        // console.log(data)
-        loadTaskInfo()
-        allLoad(taskInfo)
-    })
-    .catch(error => console.error(error));
+// fetch("/docs/taskInfo.json", {
+//         method: "GET",
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         // console.log(JSON.stringify(data))
+//         taskInfo = data
+//         // console.log(data)
+//         loadTaskInfo()
+//         allLoad(taskInfo)
+//     })
+//     .catch(error => console.error(error));
 
-function loadTaskInfo() {
+function loadTaskInfo(taskInfo) {
     document.querySelector(".progressPercentage").setAttribute("data-counter-max", `${taskInfo.dailyProgress}`);
     
     document.querySelector(".project-card").innerHTML = `<span 
