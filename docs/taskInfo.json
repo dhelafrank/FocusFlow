@@ -3,5 +3,10 @@
     "books":5,
     "assignments":9,
     "projects":3,
-    "extras":5
+    "extras":5,
+
+    "totalBooks":8,
+    "totalAssignments":10,
+    "totalProjects":5,
+    "totalExtras":10
 }
