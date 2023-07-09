@@ -85,5 +85,6 @@ function themeColor(){
     meta.name = "theme-color";
     meta.content = "#157ce2"
     document.getElementsByTagName('head')[0].appendChild(meta)
+    console.log(meta);
 }
 themeColor()
