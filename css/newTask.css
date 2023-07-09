@@ -57,7 +57,7 @@ select {
     text-align: center;
 }
 
-input[type="time"] {
+input[type="date"] {
     width: 50%;
     height: 3rem;
     border-radius: 15px;

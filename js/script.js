@@ -47,9 +47,9 @@ let newTaskForm = `
             <option value="project">Projects</option>
             <option value="extra">Extras</option>
         </select>
-        <input type="time">
+        <input type="date" class="newTaskDate">
         <textarea name="" id="" cols="30" rows="10" maxlength="256"> Additional text goes here...</textarea>
-        <button class="btn btn-positive"> Create Task</button>
+        <button class="btn create-task btn-positive"> Create Task</button>
     </div>
 </div>`
 
@@ -57,6 +57,9 @@ let newTaskForm = `
 newTaskButton.forEach(icon => {
     icon.addEventListener("click", () => {
         document.body.insertAdjacentHTML("afterbegin", newTaskForm);
+        document.querySelector(".btn-positive").addEventListener("click", (e)=>{
+            // alert(e.target.parentElement.querySelector(".newTaskDate").value)
+        })
         let newTaskContainer =  document.querySelector(".newTaskDivContainer")
         setTimeout(() => {
             newTaskContainer.style.opacity = "1";
@@ -74,6 +77,5 @@ newTaskButton.forEach(icon => {
             }
 
         })
-        document.insertAdjacentHTML('afterbegin', newTaskForm)
     })
 })
