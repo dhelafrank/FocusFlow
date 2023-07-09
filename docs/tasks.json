@@ -2,8 +2,7 @@
         "taskTitle": "Fixing Some Bugs in Project Code",
         "taskCategory": "projects",
         "taskDate": "2023-06-15",
-        "taskText": "in proress",
-        "status": "completed"
+        "taskText": "in proress"
     },
     {
         "taskTitle": "Completing Assignment Questions",
@@ -15,15 +14,13 @@
         "taskTitle": "Implementing User Authentication",
         "taskCategory": "projects",
         "taskDate": "2023-07-01",
-        "taskText": "Dummy task text for Project 1",
-        "status": "completed"
+        "taskText": "Dummy task text for Project 1"
     },
     {
         "taskTitle": "Refactoring Codebase",
         "taskCategory": "projects",
         "taskDate": "2023-06-28",
-        "taskText": "Dummy task text for Project 2",
-        "status": "completed"
+        "taskText": "Dummy task text for Project 2"
     },
     {
         "taskTitle": "Adding New Feature",
@@ -68,8 +65,7 @@
         "taskTitle": "Arranging Guest Speaker for Seminar",
         "taskCategory": "extras",
         "taskDate": "2023-06-26",
-        "taskText": "Dummy task text for Extra 3",
-        "status": "completed"
+        "taskText": "Dummy task text for Extra 3"
     },
     {
         "taskTitle": "Reading 'Sapiens: A Brief History of Humankind'",
@@ -89,8 +85,7 @@
         "taskTitle": "Exploring 'The Power of Now'",
         "taskCategory": "books",
         "taskDate": "2023-06-30",
-        "taskText": "Dummy task text for Book 3",
-        "status": "completed"
+        "taskText": "Dummy task text for Book 3"
     }
 
 ]
