@@ -80,9 +80,10 @@ newTaskButton.forEach(icon => {
     })
 })
 
-(function themeColor(){
+function themeColor(){
     var meta = document.createElement("meta");
     meta.name = "theme-color";
     meta.content = "#157ce2"
     document.getElementsByTagName('head')[0].appendChild(meta)
-})
+}
+themeColor()
