@@ -49,8 +49,8 @@ function allLoad(taskInfo) {
     progressAnimation(document.querySelector(".project-card").parentElement.querySelector(".inbar"), 100/taskInfo.totalProjects * taskInfo.projects)
     progressAnimation(document.querySelector(".extra-card").parentElement.querySelector(".inbar"), 100/taskInfo.totalExtras * taskInfo.extras)
 
-    document.querySelector(".book-card").parentElement.parentElement.querySelector(".caption").innerHTML = `${taskInfo.totalBooks - taskInfo.books} New`
-    document.querySelector(".assignment-card").parentElement.parentElement.querySelector(".caption").innerHTML = `${taskInfo.totalAssignments - taskInfo.assignments} New`
-    document.querySelector(".project-card").parentElement.parentElement.querySelector(".caption").innerHTML = `${taskInfo.totalProjects - taskInfo.projects} New`
-    document.querySelector(".extra-card").parentElement.parentElement.querySelector(".caption").innerHTML = `${taskInfo.totalExtras - taskInfo.extras} New`
+    document.querySelector(".book-card").parentElement.parentElement.querySelector(".caption").innerHTML = `${taskInfo.totalBooks - taskInfo.books} Pending`
+    document.querySelector(".assignment-card").parentElement.parentElement.querySelector(".caption").innerHTML = `${taskInfo.totalAssignments - taskInfo.assignments} Pending`
+    document.querySelector(".project-card").parentElement.parentElement.querySelector(".caption").innerHTML = `${taskInfo.totalProjects - taskInfo.projects} Pending`
+    document.querySelector(".extra-card").parentElement.parentElement.querySelector(".caption").innerHTML = `${taskInfo.totalExtras - taskInfo.extras} Pending`
 }
