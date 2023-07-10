@@ -14,14 +14,22 @@ input[type="text"] {
     outline: none;
     margin-bottom: 1rem;
 }
-.buttonContainer{
-    width: 60vw;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
+
+.buttonContainerContainer {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--background);
 }
+.buttonContainer{
+    width: 80%;
+}
+
 .buttonContainer .btn {
-    width: 40rem;
+    width: 10rem;
+    margin:1rem auto 1rem auto;
 }
 
 .historyCardsContainer {
