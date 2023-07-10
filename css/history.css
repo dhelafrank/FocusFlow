@@ -24,11 +24,13 @@ input[type="text"] {
     background: var(--background);
 }
 .buttonContainer{
-    width: 80%;
+    width: 70%;
 }
 
 .buttonContainer .btn {
-    width: 10rem;
+    width: 8rem;
+    font-size: 12px;
+    padding: 0;
     margin:1rem auto 1rem auto;
 }
 
