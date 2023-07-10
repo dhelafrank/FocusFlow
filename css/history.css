@@ -1,25 +1,35 @@
 .fa-house+.dot {
     display: none;
 }
-.navSearchSection{
-    margin-top:1rem;
+
+.navSearchSection {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
-input[type="text"]{
-    width:90%;
-    padding:1.5em;
+
+input[type="text"] {
+    width: 87%;
+    padding: 1em;
     outline: none;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
 }
-.buttonContainer .btn{
-width:7rem;
+.buttonContainer{
+    width: 60vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
 }
-.historyCardsContainer{
+.buttonContainer .btn {
+    width: 40rem;
+}
+
+.historyCardsContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.historyCardContainer .taskCard{
+
+.historyCardContainer .taskCard {
     height: 7vh;
 }

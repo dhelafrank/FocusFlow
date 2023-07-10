@@ -57,10 +57,10 @@ let newTaskForm = `
 newTaskButton.forEach(icon => {
     icon.addEventListener("click", () => {
         document.body.insertAdjacentHTML("afterbegin", newTaskForm);
-        document.querySelector(".btn-positive").addEventListener("click", (e)=>{
+        document.querySelector(".btn-positive").addEventListener("click", (e) => {
             // alert(e.target.parentElement.querySelector(".newTaskDate").value)
         })
-        let newTaskContainer =  document.querySelector(".newTaskDivContainer")
+        let newTaskContainer = document.querySelector(".newTaskDivContainer")
         setTimeout(() => {
             newTaskContainer.style.opacity = "1";
         }, 1)
@@ -71,8 +71,7 @@ newTaskButton.forEach(icon => {
                 setTimeout(() => {
                     newTaskContainer.remove()
                 }, 600)
-            }
-            else{
+            } else {
                 return;
             }
 
@@ -80,11 +79,24 @@ newTaskButton.forEach(icon => {
     })
 })
 
-function themeColor(){
+
+// let allPositiveButtons = document.querySelectorAll(".btn-positive")
+// allPositiveButtons.forEach(buttons => {
+    // buttons.addEventListener("click", () => {
+        // alert("a positive button has been clicked")
+        // document.querySelector(".btn-upcoming").classList.remove("btn-positive")
+        // document.querySelector(".btn-upcoming").classList.add("btn-notActive")
+        // document.querySelector(".btn-overview").classList.remove("btn-notActive")
+        // document.querySelector(".btn-overview").classList.add("btn-positive")
+    // })
+// })
+
+
+function themeColor() {
     var meta = document.createElement("meta");
     meta.name = "theme-color";
     meta.content = "#157ce2"
     document.getElementsByTagName('head')[0].appendChild(meta)
-    console.log(meta);
+    // console.log(meta);
 }
 themeColor()

@@ -100,6 +100,22 @@ function createTaskObject() {
         "totalTask": `${allTasksTotal || 7}`,
         "totalCompletedTask": `${totalNumberOfTaskCompleted}`
     }
-    loadTaskInfo(taskInfo)
-    allLoad(taskInfo)
+
+    runScreenFunctions(taskInfo)
+}
+
+function runScreenFunctions(taskInfo){
+    if(currentScreenValidation("home") == true){
+        loadTaskInfo(taskInfo)
+        allLoad(taskInfo)
+    }
+    
+    if(currentScreenValidation("history") == true){
+        taskHistory(allTasks)
+    }
+}
+function currentScreenValidation(screen){
+    if(document.title.toLowerCase().includes(screen)){
+        return true
+    }
 }

@@ -31,7 +31,8 @@
         "taskTitle": "Researching Machine Learning Algorithms",
         "taskCategory": "assignments",
         "taskDate": "2023-06-25",
-        "taskText": "Dummy task text for Assignment 1"
+        "taskText": "Dummy task text for Assignment 1",
+        "status": "completed"
     },
     {
         "taskTitle": "Writing Essay on Climate Change",
