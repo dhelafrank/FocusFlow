@@ -1,19 +1,5 @@
 :root{
-    --main-color:#1e90ff;
-    --background:#1a1a1a;
-    --primary-purple: #bc62ff;
-    --primary-yellow:#ffab1e;
-    --primary-green:#45c930;
-    --primary-light-green:#82fc67;
-
     --dark-shade:#1a1a1a;
-    --shade-three:#4f4f4f;
-    --shade-two:#7f7f7f;
-    --shade-one:#c1c1c1;
-
-    --big-border-r:24px;
-    --small-border-r:15px;
-
     --main-color-active:#157ce2;
 
     color:#fff;

@@ -43,3 +43,16 @@ input[type="text"] {
 .historyCardContainer .taskCard {
     height: 7vh;
 }
+.taskCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.taskCard h4{
+    padding: 0;
+    margin: 0;
+}
+.taskCard p{
+    padding: 0;
+    margin: 0;
+}

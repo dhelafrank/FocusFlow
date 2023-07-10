@@ -4,6 +4,7 @@ let homeIcon = document.querySelectorAll(".fa-house")
 let backBtn = document.querySelectorAll(".back-btn")
 let newTaskButton = document.querySelectorAll(".fa-plus")
 
+
 historyNavIcon.forEach(icon => {
     icon.addEventListener("click", () => {
         window.location.href = "/history.html"
@@ -91,12 +92,13 @@ newTaskButton.forEach(icon => {
     // })
 // })
 
+// document.body.style = `--main-color:${mainColor};`
+// if(window.colors()){
+//     window.colors()
+// }
+// else{
+//     console.error("Error Loading Themes");
+// }
 
-function themeColor() {
-    var meta = document.createElement("meta");
-    meta.name = "theme-color";
-    meta.content = "#157ce2"
-    document.getElementsByTagName('head')[0].appendChild(meta)
-    // console.log(meta);
-}
-themeColor()
+import{colors}from "/js/theme.js"
+colors()

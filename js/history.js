@@ -10,12 +10,14 @@ function appendTaskCards(allTasks) {
             taskCard = `
             <div class="component-grey-card taskCard completedTaskCard">
             <h4>${task.taskTitle}</h4>
+            <p class="caption">${task.taskCategory}</p>
             </div>
             `
         } else {
             taskCard = `
             <div class="component-grey-card taskCard notCompletedTaskCard">
             <h4>${task.taskTitle}</h4>
+            <p class="caption">${task.taskCategory}</p>
             </div>
             `
         }
