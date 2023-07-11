@@ -102,3 +102,26 @@ newTaskButton.forEach(icon => {
 
 import{colors}from "/js/theme.js"
 colors()
+
+
+
+
+
+// // Firebase
+// // Import the functions you need from the SDKs you need
+//   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+//   // TODO: Add SDKs for Firebase products that you want to use
+//   // https://firebase.google.com/docs/web/setup#available-libraries
+
+//   // Your web app's Firebase configuration
+//   const firebaseConfig = {
+//     apiKey: "AIzaSyBCWgdm6PVUzPiwYxuy9dBypdaD7JztYzE",
+//     authDomain: "focusflow-16a59.firebaseapp.com",
+//     projectId: "focusflow-16a59",
+//     storageBucket: "focusflow-16a59.appspot.com",
+//     messagingSenderId: "641123456436",
+//     appId: "1:641123456436:web:ef17961616129518c08ee1"
+//   };
+
+//   // Initialize Firebase
+//   const app = initializeApp(firebaseConfig);
