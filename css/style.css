@@ -6,11 +6,13 @@
 :root {
     background-color: var(--dark-shade);
 }
-header{
+
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .userAvatar {
     width: 40px;
     border-radius: 50%;
@@ -22,7 +24,7 @@ body {
     padding-left: 1em;
     padding-right: 1em;
     margin-bottom: 5rem;
-    
+
 }
 
 h1 {
@@ -84,17 +86,20 @@ p {
 
 .btn-notActive:active {
     background: var(--shade-three);
-    color:var(--shade-two);
+    color: var(--shade-two);
 }
-.back-btn{
-    padding:1.3em 1em;
+
+.back-btn {
+    padding: 1.3em 1em;
 }
-.component-grey-input{
+
+.component-grey-input {
     background: #ffffff44;
     border: none;
     border-radius: 15px;
     padding: 1rem;
 }
+
 .flex {
     display: flex;
 }
@@ -166,35 +171,44 @@ footer {
     left: 0;
     right: 0;
     width: 100vw;
-    z-index:10;
+    z-index: 10;
     background-image: linear-gradient(to top, var(--dark-shade), var(--dark-shade), var(--dark-shade), #ffffff00);
 }
-footer .fa-solid{
-    font-size: 1.2rem;
+
+footer .fa-solid {
+    /* font-size: 1.2rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
 footer .fa-plus {
     font-size: 1.5rem;
-    padding: 1rem 1.1rem;
+    padding: 0.5rem 0.1rem;
     border-radius: 50%;
     background: var(--main-color);
-    
+
 }
-footer .fa-solid:active{
-/* background: var(--shade-two); */
-box-shadow: 0px 0px 40px var(--main-color);
+
+footer .fa-solid:active {
+    background: var(--icon-fade);
+    box-shadow: 0px 0px 40px var(--main-color);
 }
-.completedTaskCard{
-    border:1px solid var(--primary-light-green)
+
+.completedTaskCard {
+    border: 1px solid var(--primary-light-green)
 }
-.dot{
+
+.dot {
     background: var(--main-color);
     padding: 2px;
     border-radius: 50%;
     margin-top: 10px;
     position: absolute;
-    bottom:4px;
+    bottom: 4px;
 }
+
 .emphasy {
     background-image: linear-gradient(to right, #1e90ff, #bc62ff);
     -webkit-background-clip: text;
@@ -203,46 +217,55 @@ box-shadow: 0px 0px 40px var(--main-color);
     color: transparent;
 }
 
-.feedsContainer{
-    margin-top:5vh;
+.feedsContainer {
+    margin-top: 5vh;
 }
-.feedsContainer p{
+
+.feedsContainer p {
     padding-left: 0.5rem;
 }
-.blogContainer p{
-font-size: 1rem;
+
+.blogContainer p {
+    font-size: 1rem;
 }
-.blogImgContainer{
+
+.blogImgContainer {
     overflow: hidden;
     height: 25vh;
     border-radius: 15px;
 }
-.blogImgContainer img{
-    object-fit:cover;
+
+.blogImgContainer img {
+    object-fit: cover;
     width: 100%;
 }
-.blogHeading{
+
+.blogHeading {
     font-weight: 600;
 }
-.blogContainer{
-    margin-bottom:2rem;
+
+.blogContainer {
+    margin-bottom: 2rem;
 }
-.form-input-label{
-font-size: 16px;
-margin:1rem auto 0.5rem auto;
-width: 85%;
-padding: 0;
+
+.form-input-label {
+    font-size: 16px;
+    margin: 1rem auto 0.5rem auto;
+    width: 85%;
+    padding: 0;
 }
-.component-form-input{
-    width:80%;
-    font-size:16px;
-    padding:0.8em;
+
+.component-form-input {
+    width: 80%;
+    font-size: 16px;
+    padding: 0.8em;
     border: none;
     outline: none;
     background: #00000011;
     color: white;
     border-radius: 7px;
 }
-*{
+
+* {
     /* outline: 1px dashed red; */
 }

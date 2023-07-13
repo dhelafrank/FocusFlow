@@ -5,13 +5,28 @@ let backBtn = document.querySelectorAll(".back-btn")
 let newTaskButton = document.querySelectorAll(".fa-plus")
 
 
+import {
+    setIcon
+} from "/js/icons.js"
+
+
+newTaskButton.forEach(icon => {
+    setIcon(icon, "home")
+});
+
+
+
+
+
 historyNavIcon.forEach(icon => {
+    setIcon(icon, "log")
     icon.addEventListener("click", () => {
         window.location.href = "/history.html"
     })
 })
 
 homeIcon.forEach(icon => {
+    setIcon(icon, "home")
     icon.addEventListener("click", () => {
         if (document.title.toLowerCase().includes("home")) {
             window.scrollTo({
@@ -56,6 +71,7 @@ let newTaskForm = `
 
 
 newTaskButton.forEach(icon => {
+    setIcon(icon, "plus")
     icon.addEventListener("click", () => {
         document.body.insertAdjacentHTML("afterbegin", newTaskForm);
         document.querySelector(".btn-positive").addEventListener("click", (e) => {
@@ -83,13 +99,13 @@ newTaskButton.forEach(icon => {
 
 // let allPositiveButtons = document.querySelectorAll(".btn-positive")
 // allPositiveButtons.forEach(buttons => {
-    // buttons.addEventListener("click", () => {
-        // alert("a positive button has been clicked")
-        // document.querySelector(".btn-upcoming").classList.remove("btn-positive")
-        // document.querySelector(".btn-upcoming").classList.add("btn-notActive")
-        // document.querySelector(".btn-overview").classList.remove("btn-notActive")
-        // document.querySelector(".btn-overview").classList.add("btn-positive")
-    // })
+// buttons.addEventListener("click", () => {
+// alert("a positive button has been clicked")
+// document.querySelector(".btn-upcoming").classList.remove("btn-positive")
+// document.querySelector(".btn-upcoming").classList.add("btn-notActive")
+// document.querySelector(".btn-overview").classList.remove("btn-notActive")
+// document.querySelector(".btn-overview").classList.add("btn-positive")
+// })
 // })
 
 // document.body.style = `--main-color:${mainColor};`
@@ -100,8 +116,12 @@ newTaskButton.forEach(icon => {
 //     console.error("Error Loading Themes");
 // }
 
-import{colors}from "/js/theme.js"
+import {
+    colors
+} from "/js/theme.js"
 colors()
+
+
 
 
 

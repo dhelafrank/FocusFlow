@@ -18,6 +18,7 @@ export function colors() {
         --shade-three:${colorConfig.shadeThree};
         --shade-two:${colorConfig.shadeTwo};
         --shade-one:${colorConfig.shadeOne};
+        --icon-fade:${colorConfig.iconFade};
         --main-color-active:${colorConfig.mainColorActive};
         `
         let layout = `
