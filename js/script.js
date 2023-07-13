@@ -4,7 +4,10 @@ let homeIcon = document.querySelectorAll(".fa-house")
 let backBtn = document.querySelectorAll(".back-btn")
 let newTaskButton = document.querySelectorAll(".fa-plus")
 
-
+import {
+    colors
+} from "/js/theme.js"
+colors()
 import {
     setIcon
 } from "/js/icons.js"
@@ -116,10 +119,7 @@ newTaskButton.forEach(icon => {
 //     console.error("Error Loading Themes");
 // }
 
-import {
-    colors
-} from "/js/theme.js"
-colors()
+
 
 
 

@@ -10,13 +10,13 @@ export function emailSigninAnimation() {
         document.querySelector(".isometricImage").style = `
         position: absolute;
         top:25vh;
-        transform: scale(1.4);
+        // transform: scale(1.4);
         opacity: 0.3;`
 
         // document.body.style.overflow = "hidden"
 
         document.querySelector(".emailSigninContainer").style.opacity = "1";
-        document.querySelector(".emailSigninContainer").style.bottom = "0vw";
+        document.querySelector(".emailSigninContainer").style.bottom = "50vw";
         document.querySelector(".container").style.overflow = "hidden"
         // document.querySelector(".emailSigninContainer").style = "transform: scale(1)"
     },5)
