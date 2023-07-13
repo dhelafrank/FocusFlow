@@ -195,6 +195,13 @@ box-shadow: 0px 0px 40px var(--main-color);
     position: absolute;
     bottom:4px;
 }
+.emphasy {
+    background-image: linear-gradient(to right, #1e90ff, #bc62ff);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
 .feedsContainer{
     margin-top:5vh;
@@ -219,6 +226,22 @@ font-size: 1rem;
 }
 .blogContainer{
     margin-bottom:2rem;
+}
+.form-input-label{
+font-size: 16px;
+margin:1rem auto 0.5rem auto;
+width: 85%;
+padding: 0;
+}
+.component-form-input{
+    width:80%;
+    font-size:16px;
+    padding:0.8em;
+    border: none;
+    outline: none;
+    background: #00000011;
+    color: white;
+    border-radius: 7px;
 }
 *{
     /* outline: 1px dashed red; */

@@ -12,17 +12,36 @@
 </head>
 <body>
     <div class="container flex-center flex-column">
-        <img src="/Asset/isometricIntro.png" alt="" srcset="">
-        <h1>
-            The only <br><span class="emphasy">productivity</span><br> app you need <br>to <span class="emphasy">FOCUS</span>
-        </h1>
-        <!-- <img id="blob" src="/Asset/blob1.svg" alt="" srcset=""> -->
-        <div class="signinSection flex-center flex-column">
-            <a href="/index.html"><button class="btn btn-positive"> Sign With Email </button></a>
-            <button class="btn btn-alternate"> Continue with Google </button>
-            <p class="caption"> By Continuing you agree to the <span id="TandCText">Terms and Conditions</span></p>
+        <img src="/Asset/isometricIntro.png" alt="" srcset="" class="isometricImage">
+
+        <div class="splashContainer">
+            <h1>
+                The only <br><span class="emphasy">productivity</span><br> app you need <br>to <span class="emphasy">FOCUS</span>
+            </h1>
+            <!-- <img id="blob" src="/Asset/blob1.svg" alt="" srcset=""> -->
+            <div class="signinSection flex-center flex-column">
+                <button class="btn btn-positive emailSignin"> Sign With Email </button>
+                <button class="btn btn-alternate"> Continue with Google </button>
+                <p class="caption"> By Continuing you agree to the <span id="TandCText">Terms and Conditions</span></p>
+            </div>
+        </div>
+
+        <div class="emailSigninContainer flex-center flex-column">
+            <h1>Welcome Back</h1>
+            <div class="component-grey-card flex-center flex-column">
+                <label for="email" class="form-input-label">Email</label>
+                <input type="email" name="" id="" class="component-form-input" placeholder="Enter your Email">
+                <label for="password" class="form-input-label">Password</label>
+                <input type="password" class="component-form-input" placeholder="Enter your password">
+                <div class="actionButtonContainer flex-center flex-column">
+                    <button class="btn-positive">Login</button>
+                    <p class="forgetPasswordLink">Forgot your password?</p>
+                </div>
+            </div>
+            <p class="noAccountLink">Don't have an account?</p>
         </div>
     </div>
     <script type="module" src="/js/script.js"></script>
+    <script type="module" src="/js/auth.js"></script>
 </body>
 </html>
