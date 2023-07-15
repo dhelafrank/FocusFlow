@@ -13,7 +13,8 @@
 }
 
 .container h1 {
-    font-size: 300%;
+    /* font-size: 300%; */
+    font-size:clamp(2rem, 5vw + 5rem, 3rem);
     text-align: left;
     width: 80vw;
     line-height: 4rem;
