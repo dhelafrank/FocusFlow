@@ -188,7 +188,8 @@ footer .fa-plus {
     padding: 0.5rem 0.1rem;
     border-radius: 50%;
     background: var(--main-color);
-
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
 }
 
 footer .fa-solid:active {
@@ -268,4 +269,11 @@ footer .fa-solid:active {
 
 * {
     /* outline: 1px dashed red; */
+}
+
+/* Animation */
+@keyframes rotate45deg {
+    0%{
+
+    }
 }

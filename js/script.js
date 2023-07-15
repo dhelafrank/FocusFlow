@@ -17,16 +17,16 @@ import {
 newTaskButton.forEach(icon => {
     setIcon(icon, "home")
 });
-document.querySelectorAll(".fa-book").forEach(icon =>{
+document.querySelectorAll(".fa-book").forEach(icon => {
     setMiniIcon(icon, "books")
 })
-document.querySelectorAll(".fa-assignment").forEach(icon =>{
+document.querySelectorAll(".fa-assignment").forEach(icon => {
     setMiniIcon(icon, "assignment")
 })
-document.querySelectorAll(".fa-square-check").forEach(icon =>{
+document.querySelectorAll(".fa-square-check").forEach(icon => {
     setMiniIcon(icon, "check")
 })
-document.querySelectorAll(".fa-bell").forEach(icon =>{
+document.querySelectorAll(".fa-bell").forEach(icon => {
     setMiniIcon(icon, "notification")
 })
 
@@ -86,29 +86,34 @@ let newTaskForm = `
 newTaskButton.forEach(icon => {
     setIcon(icon, "plus")
     icon.addEventListener("click", () => {
-        document.body.insertAdjacentHTML("afterbegin", newTaskForm);
-        document.querySelector(".btn-positive").addEventListener("click", (e) => {
-            // alert(e.target.parentElement.querySelector(".newTaskDate").value)
-        })
         let newTaskContainer = document.querySelector(".newTaskDivContainer")
-        setTimeout(() => {
-            newTaskContainer.style.opacity = "1";
-        }, 1)
-
-        window.addEventListener("scroll", () => {
-            if (document.contains(newTaskContainer)) {
-                newTaskContainer.style.opacity = "0";
-                setTimeout(() => {
-                    newTaskContainer.remove()
-                }, 600)
-            } else {
-                return;
-            }
-
-        })
+        if (document.contains(newTaskContainer)) {
+            removeTaskForm(newTaskContainer)
+            icon.style = `transform: rotate(0deg);`
+        } else {
+            icon.style = `transform: rotate(45deg);`
+            document.body.insertAdjacentHTML("afterbegin", newTaskForm);
+            let newTaskContainer = document.querySelector(".newTaskDivContainer")
+            // document.querySelector(".btn-positive").addEventListener("click", (e) => {
+                // alert(e.target.parentElement.querySelector(".newTaskDate").value)
+            // })
+            setTimeout(() => {
+                newTaskContainer.style.opacity = "1";
+            }, 1)
+        }
     })
 })
 
+function removeTaskForm(newTaskContainer) {
+    if (document.contains(newTaskContainer)) {
+        newTaskContainer.style.opacity = "0";
+        setTimeout(() => {
+            newTaskContainer.remove()
+        }, 600)
+    } else {
+        return;
+    }
+}
 
 // let allPositiveButtons = document.querySelectorAll(".btn-positive")
 // allPositiveButtons.forEach(buttons => {
