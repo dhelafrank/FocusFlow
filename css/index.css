@@ -144,6 +144,7 @@ header {
     justify-content: center;
     width: 17%;
     height: 30%;
+    margin-bottom: 0.5rem;
 }
 
 .progressCard1 .fa-solid {
