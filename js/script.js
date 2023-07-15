@@ -88,31 +88,37 @@ newTaskButton.forEach(icon => {
     icon.addEventListener("click", () => {
         let newTaskContainer = document.querySelector(".newTaskDivContainer")
         if (document.contains(newTaskContainer)) {
-            removeTaskForm(newTaskContainer)
-            icon.style = `transform: rotate(0deg);`
+            removeTaskForm(newTaskContainer, icon)
         } else {
-            icon.style = `transform: rotate(45deg);`
-            document.body.insertAdjacentHTML("afterbegin", newTaskForm);
-            let newTaskContainer = document.querySelector(".newTaskDivContainer")
-            // document.querySelector(".btn-positive").addEventListener("click", (e) => {
-                // alert(e.target.parentElement.querySelector(".newTaskDate").value)
-            // })
-            setTimeout(() => {
-                newTaskContainer.style.opacity = "1";
-            }, 1)
+            addTaskForm(newTaskContainer, icon)
         }
     })
 })
 
-function removeTaskForm(newTaskContainer) {
+function removeTaskForm(newTaskContainer, icon) {
+    icon.style = `transform: rotate(0deg);`
     if (document.contains(newTaskContainer)) {
         newTaskContainer.style.opacity = "0";
         setTimeout(() => {
             newTaskContainer.remove()
+            document.body.style.overflow = "auto"
         }, 600)
     } else {
         return;
     }
+}
+
+function addTaskForm(newTaskContainer, icon) {
+    icon.style = `transform: rotate(45deg);`
+    document.body.insertAdjacentHTML("afterbegin", newTaskForm);
+    newTaskContainer = document.querySelector(".newTaskDivContainer")
+    document.body.style.overflow = "hidden"
+    setTimeout(() => {
+        newTaskContainer.style.opacity = "1";
+    }, 1)
+    // window.addEventListener("scroll", () => {
+    //     removeTaskForm(newTaskContainer)
+    // })
 }
 
 // let allPositiveButtons = document.querySelectorAll(".btn-positive")
