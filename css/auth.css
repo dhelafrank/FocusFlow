@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+:root{
+    font-size: 15px;
+}
 .auth-body {
     position: relative;
     overflow: hidden;
