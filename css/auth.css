@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .auth-body {
+    position: relative;
     overflow: hidden;
 }
 
 .container {
-    position: relative;
+    
 
 }
 
@@ -55,7 +56,7 @@ img {
     /* height:90vh; */
     display: none;
     position: absolute;
-    bottom: -170vw;
+    bottom: -200vh;
     opacity: 1;
     transition: all ease-in-out 1s;
 

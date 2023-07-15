@@ -137,12 +137,18 @@ header {
 }
 
 .categoryCard-sect1 .fa-solid {
-    padding: 12px;
+    padding: 7px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 30%;
 }
 
 .progressCard1 .fa-solid {
     background: var(--main-color);
+
 }
 
 .progressCard2 .fa-solid {

@@ -16,7 +16,7 @@ export function emailSigninAnimation() {
         // document.body.style.overflow = "hidden"
 
         document.querySelector(".emailSigninContainer").style.opacity = "1";
-        document.querySelector(".emailSigninContainer").style.bottom = "50vw";
+        document.querySelector(".emailSigninContainer").style.bottom = "-90vh";
         document.querySelector(".container").style.overflow = "hidden"
         // document.querySelector(".emailSigninContainer").style = "transform: scale(1)"
     },5)

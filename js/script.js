@@ -9,16 +9,26 @@ import {
 } from "/js/theme.js"
 colors()
 import {
-    setIcon
+    setIcon,
+    setMiniIcon
 } from "/js/icons.js"
 
 
 newTaskButton.forEach(icon => {
     setIcon(icon, "home")
 });
-
-
-
+document.querySelectorAll(".fa-book").forEach(icon =>{
+    setMiniIcon(icon, "books")
+})
+document.querySelectorAll(".fa-assignment").forEach(icon =>{
+    setMiniIcon(icon, "assignment")
+})
+document.querySelectorAll(".fa-square-check").forEach(icon =>{
+    setMiniIcon(icon, "check")
+})
+document.querySelectorAll(".fa-bell").forEach(icon =>{
+    setMiniIcon(icon, "notification")
+})
 
 
 historyNavIcon.forEach(icon => {

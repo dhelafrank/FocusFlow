@@ -33,21 +33,36 @@ function fillPosts(allPosts) {
 
 
 function eventListener(allPosts) {
-  let blogBtn = document.querySelectorAll(".blogContainer");
-  blogBtn.forEach(element => {
+  let blogContainer = document.querySelectorAll(".blogContainer");
+  blogContainer.forEach(element => {
     element.addEventListener("click", (e) => {
-      // alert("clicked")
-      // alert(e.target)
-      let targetObject = (e.target.parentElement.querySelector(".blogHeading").innerText)
-
-      for (let i = 0; i < allPosts.length; i++) {
-        if (allPosts[i].topic == targetObject){
-          localStorage.setItem("postObject", JSON.stringify(allPosts[i]))
-        }
-
-      }
-      console.log((e.target.parentElement.querySelector(".blogHeading").innerText))
-      window.location.href = "/post.html"
+      loadBlog(e)
+      loadFromImage(e)
     });
+
+    
   });
+}
+
+
+function loadBlog(e){
+  let targetObject = (e.target.parentElement.querySelector(".blogHeading").innerText)
+  for (let i = 0; i < allPosts.length; i++) {
+    if (allPosts[i].topic == targetObject){
+      localStorage.setItem("postObject", JSON.stringify(allPosts[i]))
+    }
+  }
+  console.log((e.target.parentElement.querySelector(".blogHeading").innerText))
+  window.location.href = "/post.html"
+}
+
+function loadFromImage(e){
+  let targetObject = (e.target.querySelector(".blogHeading").innerText)
+  for (let i = 0; i < allPosts.length; i++) {
+    if (allPosts[i].topic == targetObject){
+      localStorage.setItem("postObject", JSON.stringify(allPosts[i]))
+    }
+  }
+  console.log((e.target.querySelector(".blogHeading").innerText))
+  window.location.href = "/post.html"
 }

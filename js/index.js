@@ -13,3 +13,5 @@ function switchToUpcoming(){
     document.querySelector(".btn-overview").classList.add("btn-notActive")
     document.querySelector(".btn-overview").classList.remove("btn-positive")
 }
+
+let upcomingSection  = document.querySelector(".upcoming")
