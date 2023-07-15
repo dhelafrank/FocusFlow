@@ -14,25 +14,10 @@ function switchToUpcoming() {
     document.querySelector(".btn-overview").classList.remove("btn-positive")
 }
 
-
 let greeting = document.querySelector(".greeting")
-let upcomingSection = document.querySelector(".upcoming")
 
-function refresh(){
-    let time = new Date()
-    let moment = (time.getHours());
-    if (moment < 10) {
-        greeting.innerHTML = "Good Morning 🌄";
-    } else if (moment < 12) {
-        greeting.innerHTML = "Good Day 🌅"
-    } else if (moment < 16) {
-        greeting.innerHTML = "Good Afternoon 🏜️";
-    } else if (moment < 20) {
-        greeting.innerHTML = "Good Evening 🌆"
-    } else if (moment < 23) {
-        greeting.innerHTML = "Good Night 🌃"
-    } else {
-        greeting.innerHTML = "Hello There"
-    }
-}
-setInterval(refresh, 100)
+import {timeOfDay} from "/js/greeting.js";
+greeting.innerHTML = timeOfDay()
+
+
+let upcomingSection = document.querySelector(".upcoming")
