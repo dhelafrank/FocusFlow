@@ -61,6 +61,7 @@ userAvatar.forEach(icon => {
 })
 
 backBtn.forEach(icon => {
+    setIcon(icon, "back")
     icon.addEventListener("click", () => {
         history.back()
     })

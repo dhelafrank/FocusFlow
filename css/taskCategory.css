@@ -1,0 +1,21 @@
+
+.header{
+    justify-content: space-between;
+    width:75VW;
+}
+.progressBar{
+    justify-content: space-around;
+}
+.progressBar h3{
+    width:20%;
+}
+.progressBar .outbar{
+width: 70%;
+}
+
+*{
+    outline: 1px dashed red;
+}
+.dot{
+    display: none;
+}

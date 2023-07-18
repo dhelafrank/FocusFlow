@@ -10,8 +10,30 @@
     <link rel="shortcut icon" href="./Asset/icon.png" type="image/png">
     <link rel="preload" href="/css/style.css" as="style">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/taskCategory.css">
 </head>
-<div class="header"><button class="btn btn-positive back-btn flex-center"> <i class="fa-solid fa-angle-left"></i></button></div>
+<div class="header flex-center"><button class="btn btn-positive back-btn flex-center"> <i
+            class="fa-solid fa-angle-left"></i></button>
+    <h1 class="categoryName"> Category Name </h1>
+</div>
+<div class="component-grey-card">
+    <p>Total Task Completed</p>
+
+
+    <div class="progressBar flex-center">
+        <div class="outbar">
+            <div class="inbar taskCategoryBar"></div>
+        </div>
+        
+        <h3><span class="progressPercentage" data-counter-min="0" data-counter-max="1" data-counter-speed="20"
+                data-counter-increment="1" data-counter-delay="0">0</span>%</h3>
+    </div>
+
+
+</div>
+
+
+
 <body>
 
     <footer>

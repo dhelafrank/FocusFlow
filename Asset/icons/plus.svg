@@ -2,8 +2,8 @@
 	<style>
 		path {
 		fill: white;
-        stroke-width:500;
+        	stroke-width:1000;
 		}
 	</style>
-    <path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z" />
+    <path d="M450-280v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z" />
 </svg>
