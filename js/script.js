@@ -124,6 +124,27 @@ function addTaskForm(newTaskContainer, icon) {
     // })
 }
 
+
+export function progressAnimation(elementSelector, widthInPercentage) {
+    elementSelector.style.width = `0%`;
+    elementSelector.style.transition = `2s ease-in-out all`;
+    setTimeout(() => {
+        elementSelector.style.width = `${widthInPercentage}%`;
+    }, 200);
+}
+
+
+
+let theme = document.createElement("meta")
+theme.name = "theme-color"
+theme.content = "#1e90ff"
+document.getElementsByTagName('head')[0].appendChild(theme)
+
+
+
+
+
+
 // let allPositiveButtons = document.querySelectorAll(".btn-positive")
 // allPositiveButtons.forEach(buttons => {
 // buttons.addEventListener("click", () => {

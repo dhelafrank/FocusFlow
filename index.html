@@ -12,7 +12,6 @@
     <link rel="preload" href="/css/style.css" as="style">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/index.css">
-    <!-- <script src="https://kit.fontawesome.com/63483fd584.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -25,10 +24,13 @@
 
     <div class="navGreeting flex  flex-column">
         <h1><span class="greeting">Hello</span><br><span>John Doe</span></h1>
+
+
         <div class="buttonContainer">
-            <button class="btn btn-positive btn-overview" onclick="switchToOverview()">Overview</button>
-            <button class="btn btn-notActive btn-upcoming" onclick="switchToUpcoming()">Upcoming</button>
+            <button class="btn btn-positive btn-overview">Overview</button>
+            <button class="btn btn-notActive btn-upcoming">Upcoming</button>
         </div>
+
     </div>
 
     <div class="progressCard component-grey-card ">
@@ -38,10 +40,10 @@
             <h3><span 
             class="progressPercentage"
             data-counter-min="0" 
-            data-counter-max="1" 
+            data-counter-max="0" 
             data-counter-speed="20" 
-            data-counter-increment="1" 
-            data-counter-delay="0">0</span>%</h3>
+            data-counter-increment="" 
+            data-counter-delay="0">40</span>%</h3>
 
             <div class="outbar">
                 <div class="inbar dailyProgressBar"></div>
@@ -60,11 +62,11 @@
             <h2>Categories</h2>
             <div class="categoryContainer">
     
-                <div class="component-grey-card progressCard1">
+                <div class="component-grey-card progressCard progressCard1">
                     <div class="categoryCard-sect1">
                         <i class="fa-solid fa-book"></i>
                         <p class="caption"></p>
-                        <h3>Books</h3>
+                        <h3 class="CardCategoryName">Books</h3>
                     </div>
                     <div class="categoryCardProgress">
                         <div class="progressBar">
@@ -79,11 +81,11 @@
                 </div>
     
     
-                <div class="component-grey-card progressCard2">
+                <div class="component-grey-card progressCard progressCard2">
                     <div class="categoryCard-sect1">
                         <i class="fa-solid fa-assignment"></i>
                         <p class="caption"></p>
-                        <h3>Assignment</h3>
+                        <h3 class="CardCategoryName">Assignments</h3>
                     </div>
                     <div class="categoryCardProgress">
                         <div class="progressBar">
@@ -98,11 +100,11 @@
                 </div>
     
     
-                <div class="component-grey-card progressCard3">
+                <div class="component-grey-card progressCard progressCard3">
                     <div class="categoryCard-sect1">
                         <i class="fa-solid fa-square-check"></i>
                         <p class="caption"></p>
-                        <h3>Projects</h3>
+                        <h3 class="CardCategoryName">Projects</h3>
                     </div>
                     <div class="categoryCardProgress">
                         <div class="progressBar">
@@ -117,11 +119,11 @@
                 </div>
     
     
-                <div class="component-grey-card progressCard4">
+                <div class="component-grey-card progressCard progressCard4">
                     <div class="categoryCard-sect1">
                         <i class="fa-solid fa-bell"></i>
                         <p class="caption"></p>
-                        <h3>Extras</h3>
+                        <h3 class="CardCategoryName">Extras</h3>
                     </div>
                     <div class="categoryCardProgress">
                         <div class="progressBar">
@@ -186,7 +188,7 @@
 
     <script type="module" src="/js/script.js"></script>
     <script src="/js/counter.js"></script>
-    <script src="/js/onloadTaskInfo.js"></script>
+    <script type="module" src="/js/onloadTaskInfo.js"></script>
     <script type="module" src="/js/index.js"></script>
     <script src="/js/taskSorter.js"></script>
     <script src="/js/postFetching.js"></script>

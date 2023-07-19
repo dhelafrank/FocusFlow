@@ -1,21 +1,6 @@
-fetch("/docs/tasks.json", {
-        method: "GET",
-    }).then(response => response.json())
-    .then(
-        data => {
-            allTasks = data
-            // findNumberOfTaskPerCategory()
-            // let completedBooks = findNumberOfCompletedTaskPerCategory("books")
-            // console.log(completedBooks)
-            // let p = findPercentageOfTotalNumberOfTaskCompleted()
-            // console.log(p);
-            sortTask()
-        }
-    )
+let allTasks = ["Foo", "bar"]
 
-
-
-function findNumberOfTaskPerCategory(categoryName) {
+export function findNumberOfTaskPerCategory(categoryName, allTasks) {
     let count = 0;
     allTasks.forEach(task => {
         if (task.taskCategory === categoryName) {
@@ -26,7 +11,7 @@ function findNumberOfTaskPerCategory(categoryName) {
     return count;
 }
 
-function findNumberOfCompletedTaskPerCategory(categoryName) {
+export function findNumberOfCompletedTaskPerCategory(categoryName, allTasks) {
     let count = 0;
     allTasks.forEach(task => {
         if (task.taskCategory === categoryName) {
@@ -39,7 +24,7 @@ function findNumberOfCompletedTaskPerCategory(categoryName) {
     return count
 }
 
-function findTotalNumberOfTaskCompleted() {
+export function findTotalNumberOfTaskCompleted() {
     let count = 0;
     allTasks.forEach(task => {
         if (task.status === "completed") {
@@ -49,9 +34,9 @@ function findTotalNumberOfTaskCompleted() {
     return count
 }
 
-function findPercentageOfTotalNumberOfTaskCompleted() {
+export function findPercentageOfTotalNumberOfTaskCompleted(allTasks) {
     let count = 0;
-    finalCount = 0;
+    let finalCount = 0;
 
     allTasks.forEach(task => {
         // console.log(allTasks.length);
@@ -61,61 +46,17 @@ function findPercentageOfTotalNumberOfTaskCompleted() {
     });
     // console.log(count);
     finalCount = count / allTasks.length * 100
-    roundedCount = Math.round(finalCount)
+    let roundedCount = Math.round(finalCount)
     // console.log(roundedCount);
     return roundedCount
 }
 
-function sortTask() {
-    books = findNumberOfCompletedTaskPerCategory("books")
-    assignments = findNumberOfCompletedTaskPerCategory("assignments")
-    projects = findNumberOfCompletedTaskPerCategory("projects")
-    extras = findNumberOfCompletedTaskPerCategory("extras")
-
-    totalBooks = findNumberOfTaskPerCategory("books")
-    totalAssignments = findNumberOfTaskPerCategory("assignments")
-    totalProjects = findNumberOfTaskPerCategory("projects")
-    totalExtras = findNumberOfTaskPerCategory("extras")
-
-    totalNumberOfTaskCompleted = findTotalNumberOfTaskCompleted()
-    allTasksTotal = allTasks.length
-    totalNumberOfTaskCompletedPercentage = findPercentageOfTotalNumberOfTaskCompleted()
-
-    createTaskObject()
-}
-
-function createTaskObject() {
-    let taskInfo = {
-        "dailyProgress": `${totalNumberOfTaskCompletedPercentage}`,
-        "books": `${books}`,
-        "assignments": `${assignments}`,
-        "projects": `${projects}`,
-        "extras": `${extras}`,
-
-        "totalBooks": `${totalBooks}`,
-        "totalAssignments": `${totalAssignments}`,
-        "totalProjects": `${totalProjects}`,
-        "totalExtras": `${totalExtras}`,
-
-        "totalTask": `${allTasksTotal || 7}`,
-        "totalCompletedTask": `${totalNumberOfTaskCompleted}`
-    }
-
-    runScreenFunctions(taskInfo)
-}
-
-function runScreenFunctions(taskInfo){
-    if(currentScreenValidation("home") == true){
-        loadTaskInfo(taskInfo)
-        allLoad(taskInfo)
-    }
-    
-    if(currentScreenValidation("history") == true){
-        taskHistory(allTasks)
-    }
-}
-function currentScreenValidation(screen){
-    if(document.title.toLowerCase().includes(screen)){
-        return true
-    }
+export function getAllTasksInACategory(categoryName, allTasks) {
+    let categoryTasks = []
+    allTasks.forEach(task => {
+        if (task.taskCategory == categoryName) {
+            categoryTasks.push(task)
+        }
+    })
+    return categoryTasks
 }

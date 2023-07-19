@@ -1,6 +1,7 @@
-function loadTaskInfo(taskInfo) {
+
+
+export function loadTaskInfo(taskInfo) {
     document.querySelector(".progressPercentage").setAttribute("data-counter-max", `${taskInfo.dailyProgress}`);
-    
     document.querySelector(".project-card").innerHTML = `<span 
     class="progressPercentage"
     data-counter-min="0" 
@@ -31,17 +32,9 @@ function loadTaskInfo(taskInfo) {
     data-counter-delay="0">${taskInfo.extras}</span>/${taskInfo.totalExtras}`
     const counter3 = new Counter(".progressPercentage");
 }
+import { progressAnimation } from "/js/script.js";
 
-
-function progressAnimation(elementSelector, widthInPercentage) {
-    elementSelector.style.width = `0%`;
-    elementSelector.style.transition = `2s ease-in-out all`;
-    setTimeout(() => {
-        elementSelector.style.width = `${widthInPercentage}%`;
-    }, 200);
-}
-
-function allLoad(taskInfo) {
+export function allLoad(taskInfo) {
     let dailyProgressBar = document.querySelector(".dailyProgressBar");
     progressAnimation(dailyProgressBar, taskInfo.dailyProgress);
     progressAnimation(document.querySelector(".book-card").parentElement.querySelector(".inbar"), 100/taskInfo.totalBooks * taskInfo.books)
