@@ -36,33 +36,39 @@ function eventListener(allPosts) {
   let blogContainer = document.querySelectorAll(".blogContainer");
   blogContainer.forEach(element => {
     element.addEventListener("click", (e) => {
-      loadBlog(e)
-      loadFromImage(e)
+      let targetTopic = ""
+      try {
+         targetTopic = (e.target.parentElement.querySelector(".blogHeading").innerText)
+      } catch (error) {
+         targetTopic = (e.target.parentElement.parentElement.querySelector(".blogHeading").innerText)
+      }
+      finally{
+        // alert(`${e.target} ${targetTopic}`)
+        loadBlog(targetTopic)
+      }
     });
-
     
   });
 }
 
 
-function loadBlog(e){
-  let targetObject = (e.target.parentElement.querySelector(".blogHeading").innerText)
+function loadBlog(targetTopic){
   for (let i = 0; i < allPosts.length; i++) {
-    if (allPosts[i].topic == targetObject){
+    if (allPosts[i].topic == targetTopic){
       localStorage.setItem("postObject", JSON.stringify(allPosts[i]))
     }
   }
-  console.log((e.target.parentElement.querySelector(".blogHeading").innerText))
   window.location.href = "/post.html"
 }
 
-function loadFromImage(e){
-  let targetObject = (e.target.querySelector(".blogHeading").innerText)
-  for (let i = 0; i < allPosts.length; i++) {
-    if (allPosts[i].topic == targetObject){
-      localStorage.setItem("postObject", JSON.stringify(allPosts[i]))
-    }
-  }
-  console.log((e.target.querySelector(".blogHeading").innerText))
-  window.location.href = "/post.html"
-}
+// function loadFromImage(e){
+  
+  
+//   for (let i = 0; i < allPosts.length; i++) {
+//     if (allPosts[i].topic == targetObject){
+//       localStorage.setItem("postObject", JSON.stringify(allPosts[i]))
+//     }
+//   }
+//   console.log((e.target.querySelector(".blogHeading").innerText))
+//   window.location.href = "/post.html"
+// }
