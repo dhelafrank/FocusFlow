@@ -57,4 +57,5 @@ function emailSignin(siginEmailAddress, signinPassword) {
 function succesfullLogin(user) {
     localStorage.setItem("currentUser", user)
     localStorage.setItem("userAuth", true)
+    window.location.href="/index.html"
 }
