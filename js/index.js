@@ -9,6 +9,15 @@ import {
     allLoad
 } from "/js/onloadTaskInfo.js"
 
+import {
+    timeOfDay
+} from "/js/greeting.js";
+
+import {
+    currentUserDetails
+} from "/js/securityFunctions.js";
+
+
 let allTasks = ""
 fetch("/docs/tasks.json", {
         method: "GET",
@@ -20,30 +29,26 @@ fetch("/docs/tasks.json", {
         }
     )
 
-    document.querySelector(".btn-overview").addEventListener("click", ()=>{
-        document.querySelector(".main").style = "transform: translateX(0);"
-        document.querySelector(".btn-upcoming").classList.remove("btn-positive")
-        document.querySelector(".btn-upcoming").classList.add("btn-notActive")
-        document.querySelector(".btn-overview").classList.remove("btn-notActive")
-        document.querySelector(".btn-overview").classList.add("btn-positive")
-    })
-    
-    document.querySelector(".btn-upcoming").addEventListener("click", ()=>{
-        document.querySelector(".main").style = "transform: translateX(-95vw);"
-        document.querySelector(".btn-upcoming").classList.add("btn-positive")
-        document.querySelector(".btn-upcoming").classList.remove("btn-notActive")
-        document.querySelector(".btn-overview").classList.add("btn-notActive")
-        document.querySelector(".btn-overview").classList.remove("btn-positive")
-    })
+document.querySelector(".btn-overview").addEventListener("click", () => {
+    document.querySelector(".main").style = "transform: translateX(0);"
+    document.querySelector(".btn-upcoming").classList.remove("btn-positive")
+    document.querySelector(".btn-upcoming").classList.add("btn-notActive")
+    document.querySelector(".btn-overview").classList.remove("btn-notActive")
+    document.querySelector(".btn-overview").classList.add("btn-positive")
+})
+
+document.querySelector(".btn-upcoming").addEventListener("click", () => {
+    document.querySelector(".main").style = "transform: translateX(-95vw);"
+    document.querySelector(".btn-upcoming").classList.add("btn-positive")
+    document.querySelector(".btn-upcoming").classList.remove("btn-notActive")
+    document.querySelector(".btn-overview").classList.add("btn-notActive")
+    document.querySelector(".btn-overview").classList.remove("btn-positive")
+})
 
 let greeting = document.querySelector(".greeting")
 let progressCards = document.querySelectorAll(".progressCard")
 let upcomingSection = document.querySelector(".upcoming")
 
-import {
-    timeOfDay
-} from "/js/greeting.js";
-greeting.innerHTML = timeOfDay()
 
 progressCards.forEach(card => {
     card.addEventListener("click", (e) => {
@@ -52,6 +57,12 @@ progressCards.forEach(card => {
         window.location.href = "/taskCategory.html"
     })
 })
+
+
+
+// console.log(currentUser);
+greeting.innerHTML = timeOfDay()
+document.querySelector(".user-name").innerHTML = currentUserDetails().name
 
 function sortTask(allTasks) {
     var books = findNumberOfCompletedTaskPerCategory("books", allTasks)

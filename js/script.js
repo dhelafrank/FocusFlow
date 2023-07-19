@@ -19,6 +19,7 @@ import {
     userStat
 } from "/js/securityFunctions.js"
 
+
 newTaskButton.forEach(icon => {
     setIcon(icon, "home")
 });
@@ -143,6 +144,8 @@ theme.name = "theme-color"
 theme.content = "#1e90ff"
 document.getElementsByTagName('head')[0].appendChild(theme)
 
+
+
 setInterval(()=>{
     if (document.title.toLowerCase().includes("auth")) {
         userStat(true)
@@ -151,6 +154,7 @@ setInterval(()=>{
            userStat()
        }
 },100)
+
 
 
 

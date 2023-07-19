@@ -18,14 +18,13 @@ document.querySelector(".loginEmailButton").addEventListener("click", () => {
 
 function emailSignin(siginEmailAddress, signinPassword) {
     let apiKey = ""
-    alert("Signing In...")
+    // alert("Signing In...")
     fetch("/docs/auth.json", {
             method: "GET",
         })
         .then(response => response.json())
         .then(data => {
             apiKey = data.apiKey
-            alert(apiKey)
             proceedToLogin(siginEmailAddress, signinPassword, apiKey)
         })
         .catch(error => console.error(error));
@@ -42,11 +41,14 @@ function emailSignin(siginEmailAddress, signinPassword) {
                 function validateUser() {
                     usersInfo.forEach(user => {
                         if (user.email == siginEmailAddress && user.password == stringToHex(signinPassword)) {
-                            alert("That Was a Success")
+                            // alert("That Was a Success")
                             succesfullLogin(user)
+                            
+                        } else {
+                            return;
+                            // failedLogin()     
                         }
                     });
-                    alert("Login Failed")
                 }
                 validateUser()
             })
@@ -55,7 +57,18 @@ function emailSignin(siginEmailAddress, signinPassword) {
 }
 
 function succesfullLogin(user) {
-    localStorage.setItem("currentUser", user)
+    localStorage.setItem("currentUser", JSON.stringify(user))
     localStorage.setItem("userAuth", true)
-    window.location.href="/index.html"
+    window.location.href = "/index.html"
+}
+
+
+function failedLogin() {
+    document.querySelector(".signinPasswordField").value = ""
+    document.querySelectorAll(".component-form-input").forEach(input => {
+        input.style.border = ".5px solid red"
+        setTimeout(() => {
+            input.style.border = "none"
+        }, 3000)
+    })
 }

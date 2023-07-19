@@ -12,14 +12,24 @@ export const stringToHex = (str) => {
 }
 
 export function userStat(halt) {
-    if (halt === true) {
+    if (halt == true) {
         return;
     } else {
-        if (localStorage.getItem("userAuth") === true) {
-            return;
-        } else {
-            alert("You Must Login First")
-            window.location.href = "/auth.html"
-        }
+        check()
     }
+    function check(){
+        if (localStorage.getItem("userAuth") !== "true") {
+            console.error("You Must Login First")
+            window.location.href = "/auth.html"
+       } else {
+          return;
+       }
+    }
+}
+
+
+export function currentUserDetails(){
+    let userInfo = localStorage.getItem("currentUser")
+    let currentUser = JSON.parse(userInfo)
+    return currentUser
 }
