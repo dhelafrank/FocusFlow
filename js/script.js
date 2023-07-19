@@ -153,7 +153,7 @@ setInterval(()=>{
        else{
            userStat()
        }
-},100)
+},500)
 
 
 
