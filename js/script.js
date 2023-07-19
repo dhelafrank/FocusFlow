@@ -15,6 +15,9 @@ import {
     setMiniIcon
 } from "/js/icons.js"
 
+import {
+    userStat
+} from "/js/securityFunctions.js"
 
 newTaskButton.forEach(icon => {
     setIcon(icon, "home")
@@ -139,6 +142,15 @@ let theme = document.createElement("meta")
 theme.name = "theme-color"
 theme.content = "#1e90ff"
 document.getElementsByTagName('head')[0].appendChild(theme)
+
+setInterval(()=>{
+    if (document.title.toLowerCase().includes("auth")) {
+        userStat(true)
+       }
+       else{
+           userStat()
+       }
+},100)
 
 
 

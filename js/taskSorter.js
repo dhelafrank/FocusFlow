@@ -1,6 +1,6 @@
 let allTasks = ["Foo", "bar"]
 
-export function findNumberOfTaskPerCategory(categoryName, allTasks) {
+export function findNumberOfTaskPerCategory(categoryName, allTasks){
     let count = 0;
     allTasks.forEach(task => {
         if (task.taskCategory === categoryName) {
