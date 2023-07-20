@@ -2,7 +2,11 @@ import {
     currentUserDetails,
     currentUserTasks
 } from "/js/securityFunctions.js";
+import {
+    load
+} from "/js//loader.js";
 
+load(true)
 function taskFetching() {
     currentUserTasks(`${currentUserDetails().taskID.toLowerCase()}`)
     let allTasks = localStorage.getItem("currentUserTasks")
@@ -18,7 +22,7 @@ function taskHistory(allTasks) {
 
 function appendTaskCards(allTasks) {
     let taskCount = 0
-    let taskCard =""
+    let taskCard = ""
     allTasks.forEach(task => {
         if (task.status == "completed") {
             taskCard = `
@@ -37,6 +41,7 @@ function appendTaskCards(allTasks) {
         }
         document.querySelector(".historyCardContainer").insertAdjacentHTML("beforeend", taskCard)
     });
+    load()
 }
 
 function sortForAll() {

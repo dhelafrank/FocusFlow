@@ -72,3 +72,7 @@ function failedLogin() {
         }, 3000)
     })
 }
+
+document.querySelector(".noAccountLink").addEventListener("click",(e)=>{
+    e.target.style.color = "#45c930"
+})

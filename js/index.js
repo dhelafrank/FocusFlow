@@ -18,12 +18,25 @@ import {
     currentUserTasks
 } from "/js/securityFunctions.js";
 
+import {
+    load
+} from "/js/loader.js";
+
+import {
+    colors
+} from "/js/theme.js"
+colors()
+load(true)
+
+
+// This function needs to be fixed
 function taskFetching() {
     currentUserTasks(`${currentUserDetails().taskID.toLowerCase()}`)
+
     let allTasks = localStorage.getItem("currentUserTasks")
     setTimeout(() => {
         sortTask(JSON.parse((allTasks)))
-    }, 500)
+    }, 1000)
 }
 taskFetching()
 
@@ -45,7 +58,6 @@ document.querySelector(".btn-upcoming").addEventListener("click", () => {
 
 let greeting = document.querySelector(".greeting")
 let progressCards = document.querySelectorAll(".progressCard")
-let upcomingSection = document.querySelector(".upcoming")
 
 
 progressCards.forEach(card => {
@@ -93,7 +105,7 @@ function sortTask(allTasks) {
         "totalTask": `${allTasksTotal || 7}`,
         "totalCompletedTask": `${totalNumberOfTaskCompleted}`
     }
-
+    load()
     runScreenFunctions(taskInfo)
 }
 
@@ -114,3 +126,22 @@ function currentScreenValidation(screen) {
         return true
     }
 }
+
+function quote() {
+    let quoteText = ""
+    let quoteAuthor = ""
+    fetch("https://type.fit/api/quotes").then((res) => {
+        return res.json
+    }).then((data) => {
+        let quoteItself = data[Math.random()*(data.length - 2)]
+        quoteText = quoteItself.text
+        quoteAuthor = quoteText.author
+
+        function fillQoute(){
+            document.querySelector(".quote-text").innerHTML = quoteText
+            document.querySelector(".quote-author").innerHTML = quoteAuthor
+        }
+        fillQoute()
+    })
+}
+quote()

@@ -15,6 +15,14 @@
 </head>
 
 <body>
+    <script type="module">
+
+        import {
+            colors
+        } from "/js/theme.js";
+        colors()
+
+    </script>
     <header>
         <h3 class="indicator">Home</h3>
         <div class="headSection flex-center">
@@ -37,13 +45,8 @@
         <h2>Daily progress</h2>
         <p class="label">Here you can see your daily progress</p>
         <div class="progressBar">
-            <h3><span 
-            class="progressPercentage"
-            data-counter-min="0" 
-            data-counter-max="0" 
-            data-counter-speed="20" 
-            data-counter-increment="" 
-            data-counter-delay="0">0</span>%</h3>
+            <h3><span class="progressPercentage" data-counter-min="0" data-counter-max="0" data-counter-speed="70"
+                    data-counter-increment="" data-counter-delay="0">0</span>%</h3>
 
             <div class="outbar">
                 <div class="inbar dailyProgressBar"></div>
@@ -52,115 +55,115 @@
     </div>
 
     <div class="quoteCard component-grey-card">
-        <p class="qoute label"> Education paves a greater path to success</p>
-        <p class="qoute label quote-author"> John Doe</p>
+        <p class="qoute label quote-text"> Life is a learning experience, only if you learn</p>
+        <p class="qoute label quote-author">Yogi Berra</p>
     </div>
 
-<div class="mainContainer">
-    <div class="main">
-        <section class="categories">
-            <h2>Categories</h2>
-            <div class="categoryContainer">
-    
-                <div class="component-grey-card progressCard progressCard1">
-                    <div class="categoryCard-sect1">
-                        <i class="fa-solid fa-book"></i>
-                        <p class="caption"></p>
-                        <h3 class="CardCategoryName">Books</h3>
-                    </div>
-                    <div class="categoryCardProgress">
-                        <div class="progressBar">
-                            <div class="outbar">
-                                <div class="inbar"></div>
-                            </div>
+    <div class="mainContainer">
+        <div class="main">
+            <section class="categories">
+                <h2>Categories</h2>
+                <div class="categoryContainer">
+
+                    <div class="component-grey-card progressCard progressCard1">
+                        <div class="categoryCard-sect1">
+                            <i class="fa-solid fa-book"></i>
+                            <p class="caption"></p>
+                            <h3 class="CardCategoryName">Books</h3>
                         </div>
-                        <p class="progressBarIndicator book-card">
-                            0/0
-                        </p>
-                    </div>
-                </div>
-    
-    
-                <div class="component-grey-card progressCard progressCard2">
-                    <div class="categoryCard-sect1">
-                        <i class="fa-solid fa-assignment"></i>
-                        <p class="caption"></p>
-                        <h3 class="CardCategoryName">Assignments</h3>
-                    </div>
-                    <div class="categoryCardProgress">
-                        <div class="progressBar">
-                            <div class="outbar">
-                                <div class="inbar"></div>
+                        <div class="categoryCardProgress">
+                            <div class="progressBar">
+                                <div class="outbar">
+                                    <div class="inbar"></div>
+                                </div>
                             </div>
+                            <p class="progressBarIndicator book-card">
+                                0/0
+                            </p>
                         </div>
-                        <p class="progressBarIndicator assignment-card">
-                            0/0
-                        </p>
                     </div>
-                </div>
-    
-    
-                <div class="component-grey-card progressCard progressCard3">
-                    <div class="categoryCard-sect1">
-                        <i class="fa-solid fa-square-check"></i>
-                        <p class="caption"></p>
-                        <h3 class="CardCategoryName">Projects</h3>
-                    </div>
-                    <div class="categoryCardProgress">
-                        <div class="progressBar">
-                            <div class="outbar">
-                                <div class="inbar"></div>
-                            </div>
-                        </div>
-                        <p class="progressBarIndicator project-card">
-                            0/0
-                        </p>
-                    </div>
-                </div>
-    
-    
-                <div class="component-grey-card progressCard progressCard4">
-                    <div class="categoryCard-sect1">
-                        <i class="fa-solid fa-bell"></i>
-                        <p class="caption"></p>
-                        <h3 class="CardCategoryName">Extras</h3>
-                    </div>
-                    <div class="categoryCardProgress">
-                        <div class="progressBar">
-                            <div class="outbar">
-                                <div class="inbar"></div>
-                            </div>
-                        </div>
-                        <p class="progressBarIndicator extra-card">
-                            0/0
-                        </p>
-                    </div>
-                </div>
-    
-            </div>
-        </section>
-        <section class="upcoming">
 
 
-            <div class="component-grey-card upcomingTasksContainer">
-                <h3>
-                    Upcoming Tasks
-                    <div class="component-grey-card upcomingTasksCard">
-                        <p>Fixing Some Bugs in project code<p>
+                    <div class="component-grey-card progressCard progressCard2">
+                        <div class="categoryCard-sect1">
+                            <i class="fa-solid fa-assignment"></i>
+                            <p class="caption"></p>
+                            <h3 class="CardCategoryName">Assignments</h3>
+                        </div>
+                        <div class="categoryCardProgress">
+                            <div class="progressBar">
+                                <div class="outbar">
+                                    <div class="inbar"></div>
+                                </div>
+                            </div>
+                            <p class="progressBarIndicator assignment-card">
+                                0/0
+                            </p>
+                        </div>
                     </div>
-                    <div class="component-grey-card upcomingTasksCard">
-                        <p>Completing Assignment questions<p>
-                    </div>
-                    <div class="component-grey-card upcomingTasksCard">
-                        <p>Attending the maths webinar<p>
-                    </div>
-                </h3>
-            </div>
 
 
-        </section>
+                    <div class="component-grey-card progressCard progressCard3">
+                        <div class="categoryCard-sect1">
+                            <i class="fa-solid fa-square-check"></i>
+                            <p class="caption"></p>
+                            <h3 class="CardCategoryName">Projects</h3>
+                        </div>
+                        <div class="categoryCardProgress">
+                            <div class="progressBar">
+                                <div class="outbar">
+                                    <div class="inbar"></div>
+                                </div>
+                            </div>
+                            <p class="progressBarIndicator project-card">
+                                0/0
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="component-grey-card progressCard progressCard4">
+                        <div class="categoryCard-sect1">
+                            <i class="fa-solid fa-bell"></i>
+                            <p class="caption"></p>
+                            <h3 class="CardCategoryName">Extras</h3>
+                        </div>
+                        <div class="categoryCardProgress">
+                            <div class="progressBar">
+                                <div class="outbar">
+                                    <div class="inbar"></div>
+                                </div>
+                            </div>
+                            <p class="progressBarIndicator extra-card">
+                                0/0
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="upcoming">
+
+
+                <div class="component-grey-card upcomingTasksContainer">
+                    <h3>
+                        Upcoming Tasks
+                        <div class="component-grey-card upcomingTasksCard">
+                            <p>Fixing Some Bugs in project code<p>
+                        </div>
+                        <div class="component-grey-card upcomingTasksCard">
+                            <p>Completing Assignment questions<p>
+                        </div>
+                        <div class="component-grey-card upcomingTasksCard">
+                            <p>Attending the maths webinar<p>
+                        </div>
+                    </h3>
+                </div>
+
+
+            </section>
+        </div>
     </div>
-</div>
 
 
 

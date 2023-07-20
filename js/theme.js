@@ -30,6 +30,7 @@ export function colors() {
         themeColor(colorConfig)
       })
       .catch(error => console.error(error));
+
 }
 
 function themeColor(colorConfig) {
