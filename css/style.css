@@ -51,6 +51,7 @@ p {
 
 .caption {
     font-size: 12px;
+    color:var(--shade-two)
 }
 
 .btn {
