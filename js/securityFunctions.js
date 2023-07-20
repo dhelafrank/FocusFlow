@@ -33,3 +33,26 @@ export function currentUserDetails(){
     let currentUser = JSON.parse(userInfo)
     return currentUser
 }
+
+export function currentUserTasks(suppliedID){
+    let currentUserTasks = ["T", "E", "S", "T"]
+    fetch("/docs/tasksDatabase.json", {
+        method: "GET",
+    }).then(response => response.json())
+    .then(
+        data => {
+            currentUserTasks = getTasks(data, suppliedID)
+            localStorage.setItem("currentUserTasks",JSON.stringify(currentUserTasks))
+        }        
+    )
+}
+function getTasks(data, suppliedID) {
+    data.forEach(task => {
+        if(task.id == suppliedID){
+            currentUserTasks = task.tasks
+        }
+    });
+    return currentUserTasks;
+}
+
+

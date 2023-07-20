@@ -14,20 +14,16 @@ import {
 } from "/js/greeting.js";
 
 import {
-    currentUserDetails
+    currentUserDetails,
+    currentUserTasks
 } from "/js/securityFunctions.js";
 
-
-let allTasks = ""
-fetch("/docs/tasks.json", {
-        method: "GET",
-    }).then(response => response.json())
-    .then(
-        data => {
-            allTasks = data
-            sortTask(allTasks)
-        }
-    )
+function taskFetching() {
+    currentUserTasks(`${currentUserDetails().taskID.toLowerCase()}`)
+    let allTasks = localStorage.getItem("currentUserTasks")
+    sortTask(JSON.parse((allTasks)))
+}
+taskFetching()
 
 document.querySelector(".btn-overview").addEventListener("click", () => {
     document.querySelector(".main").style = "transform: translateX(0);"
@@ -61,8 +57,8 @@ progressCards.forEach(card => {
 
 
 // console.log(currentUser);
-greeting.innerHTML = timeOfDay()
 document.querySelector(".user-name").innerHTML = currentUserDetails().name
+greeting.innerHTML = timeOfDay()
 
 function sortTask(allTasks) {
     var books = findNumberOfCompletedTaskPerCategory("books", allTasks)
