@@ -41,13 +41,9 @@ function emailSignin(siginEmailAddress, signinPassword) {
                 function validateUser() {
                     usersInfo.forEach(user => {
                         if (user.email == siginEmailAddress && user.password == stringToHex(signinPassword)) {
-                            // alert("That Was a Success")
                             succesfullLogin(user)
-                            
-                        } else {
-                            return;
-                            // failedLogin()     
                         }
+                        failedLogin()
                     });
                 }
                 validateUser()
@@ -75,4 +71,7 @@ function failedLogin() {
 
 document.querySelector(".noAccountLink").addEventListener("click",(e)=>{
     e.target.style.color = "#45c930"
+    setTimeout(() => {
+        window.location.href = "/signup.html"
+    }, 500);
 })

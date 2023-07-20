@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Auth</title>
+    <link rel="shortcut icon" href="./Asset/icon.png" type="image/png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+
+<body>
+    <h1 class="header">Lets get you an account</h1>
+    <div class="formContainer">
+        <div class="form component-grey-card">
+            <div class="section1 flex-center flex-column">
+                <input type="text" name="" id="signUpName" class="component-grey-input" placeholder="What should we call you" >
+                <input type="text" name="" id="signUpEmail" class="component-grey-input" placeholder="Enter your email address" >
+
+                <input type="password" name="" id="signUpPassword" class="component-grey-input passwords" placeholder="Choose a password" >
+                <input type="password" name="" id="signUpPassword confirm" class="component-grey-input passwords" placeholder="Confirm password">
+
+                <div class="button-container flex-center">
+                    <button class="btn btn-alternate previous">Back</button>
+                    <button class="btn btn-positive proceed">Proceed</button>
+                </div>
+            </div>
+        </div>
+        <div class="finally-container flex-center flex-column">
+            <h3 class="accountCreationText"></h3>
+            <button class="reSigninButton btn btn-positive"> Sign In</button>
+        </div>
+        
+    </div>
+    <p class="caption"> By Continuing you agree to the <span class="TandCText">Terms and Conditions</span></p>
+    <script type="module" src="/js/script.js"></script>
+    <script type="module" src="/js/signup.js"></script>
+</body>
+</html>
