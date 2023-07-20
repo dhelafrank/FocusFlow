@@ -3,10 +3,10 @@ import {
     currentUserTasks
 } from "/js/securityFunctions.js";
 import {
-    load
+    customLoader
 } from "/js//loader.js";
 
-load(true)
+customLoader("Gathering your tasks", true)
 function taskFetching() {
     currentUserTasks(`${currentUserDetails().taskID.toLowerCase()}`)
     let allTasks = localStorage.getItem("currentUserTasks")
@@ -41,7 +41,7 @@ function appendTaskCards(allTasks) {
         }
         document.querySelector(".historyCardContainer").insertAdjacentHTML("beforeend", taskCard)
     });
-    load()
+    customLoader()
 }
 
 function sortForAll() {

@@ -46,11 +46,10 @@ function emailSignin(siginEmailAddress, signinPassword, e) {
             .then(response => response.json())
             .then(data => {
                 let usersInfo = data.record
-
                 function validateUser() {
                     usersInfo.forEach(user => {
                         if (user.email == siginEmailAddress && user.password == stringToHex(signinPassword)) {
-                            load(true)
+                            customLoader("Standby...", true)
                             localStorage.setItem("currentUser", JSON.stringify(user))
                             localStorage.setItem("userAuth", true)
                             window.location.href = "/index.html"
@@ -58,7 +57,7 @@ function emailSignin(siginEmailAddress, signinPassword, e) {
                         failedLogin(e)
                     });
                 }
-                validateUser()
+                validateUser(usersInfo)
             })
             .catch(error => console.error(error));
     }
