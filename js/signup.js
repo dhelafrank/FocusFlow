@@ -119,13 +119,12 @@ function attemptingAccountCreation() {
                 "name": `${name}`,
                 "email": `${email}`,
                 "id": allUsers.record.length + 500,
-                "taskID": stringToHex(allUsers.record.length + 125),
+                "taskID": stringToHex(toString(allUsers.record.length + 125)),
                 "avatar": "",
                 "password": `${stringToHex(password)}`
             }
             allUsers.record.push(registeredUser)
-            console.log(registeredUser);
-            // registerUser(allUsers, registeredUser)
+            registerUser(allUsers, registeredUser)
         }
     }
 
