@@ -5,6 +5,9 @@ import {
     stringToHex
 } from "/js/securityFunctions.js"
 
+import {
+    load
+} from "/js/loader.js";
 document.querySelector(".emailSignin").addEventListener("click", () => {
     emailSigninAnimation()
 })
@@ -41,7 +44,10 @@ function emailSignin(siginEmailAddress, signinPassword) {
                 function validateUser() {
                     usersInfo.forEach(user => {
                         if (user.email == siginEmailAddress && user.password == stringToHex(signinPassword)) {
-                            succesfullLogin(user)
+                            load(true)
+                            localStorage.setItem("currentUser", JSON.stringify(user))
+                            localStorage.setItem("userAuth", true)
+                            window.location.href = "/index.html"
                         }
                         failedLogin()
                     });
@@ -51,13 +57,6 @@ function emailSignin(siginEmailAddress, signinPassword) {
             .catch(error => console.error(error));
     }
 }
-
-function succesfullLogin(user) {
-    localStorage.setItem("currentUser", JSON.stringify(user))
-    localStorage.setItem("userAuth", true)
-    window.location.href = "/index.html"
-}
-
 
 function failedLogin() {
     document.querySelector(".signinPasswordField").value = ""
@@ -69,7 +68,7 @@ function failedLogin() {
     })
 }
 
-document.querySelector(".noAccountLink").addEventListener("click",(e)=>{
+document.querySelector(".noAccountLink").addEventListener("click", (e) => {
     e.target.style.color = "#45c930"
     setTimeout(() => {
         window.location.href = "/signup.html"
