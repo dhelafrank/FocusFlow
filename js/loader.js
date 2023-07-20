@@ -14,6 +14,6 @@ export function load(state) {
     } else {
         setTimeout(() => {
             document.querySelector(".circleLoaderContainer").remove()
-        }, 300);
+        }, 1000);
     }
 }

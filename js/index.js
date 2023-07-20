@@ -130,12 +130,15 @@ function currentScreenValidation(screen) {
 function quote() {
     let quoteText = ""
     let quoteAuthor = ""
-    fetch("https://type.fit/api/quotes").then((res) => {
-        return res.json
-    }).then((data) => {
-        let quoteItself = data[Math.random()*(data.length - 2)]
+        fetch("https://type.fit/api/quotes", {
+            method: "GET",
+        })
+        .then(response => response.json())
+        .then(data => {
+        // let quoteItself = data[Math.random()*(data.length - 2)+2]
+        let quoteItself = data[Math.floor(Math.random() * data.length)];
         quoteText = quoteItself.text
-        quoteAuthor = quoteText.author
+        quoteAuthor = quoteItself.author
 
         function fillQoute(){
             document.querySelector(".quote-text").innerHTML = quoteText
