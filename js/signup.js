@@ -114,17 +114,18 @@ function attemptingAccountCreation() {
         function parseUserData() {
             let stringAllUsers = sessionStorage.getItem("otherInfo")
             let allUsers = JSON.parse(stringAllUsers)
-
+            // console.log(allUsers.length);
             let registeredUser = {
                 "name": `${name}`,
                 "email": `${email}`,
-                "id": "",
-                "taskID": "",
+                "id": allUsers.record.length + 500,
+                "taskID": stringToHex(allUsers.record.length + 125),
                 "avatar": "",
                 "password": `${stringToHex(password)}`
             }
             allUsers.record.push(registeredUser)
-            registerUser(allUsers, registeredUser)
+            console.log(registeredUser);
+            // registerUser(allUsers, registeredUser)
         }
     }
 
