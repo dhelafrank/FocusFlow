@@ -17,42 +17,57 @@ export function userStat(halt) {
     } else {
         check()
     }
-    function check(){
+
+    function check() {
         if (localStorage.getItem("userAuth") !== "true") {
             console.error("You Must Login First")
             window.location.href = "/auth.html"
-       } else {
-          return;
-       }
+        } else {
+            return;
+        }
     }
 }
 
 
-export function currentUserDetails(){
+export function currentUserDetails() {
     let userInfo = localStorage.getItem("currentUser")
     let currentUser = JSON.parse(userInfo)
     return currentUser
 }
 
-export function currentUserTasks(suppliedID){
+export function currentUserTasks(suppliedID) {
     let currentUserTasks = ["T", "E", "S", "T"]
     fetch("/docs/tasksDatabase.json", {
-        method: "GET",
-    }).then(response => response.json())
-    .then(
-        data => {
-            currentUserTasks = getTasks(data, suppliedID)
-            localStorage.setItem("currentUserTasks",JSON.stringify(currentUserTasks))
-        }        
-    )
+            method: "GET",
+        }).then(response => response.json())
+        .then(
+            data => {
+                currentUserTasks = getTasks(data, suppliedID)
+                localStorage.setItem("currentUserTasks", JSON.stringify(currentUserTasks))
+            }
+        )
 }
+
 function getTasks(data, suppliedID) {
     data.forEach(task => {
-        if(task.id == suppliedID){
-            currentUserTasks = task.tasks
+        if (task.id == suppliedID) {
+            if (task.tasks == null || undefined) {
+                currentUserTasks = [{
+                    "taskTitle": "Fixing Some Bugs in Project Code",
+                    "taskCategory": "projects",
+                    "taskDate": "2023-06-15",
+                    "taskText": "in proress"
+                }, {
+                    "taskTitle": "Fixing Some Bugs in Project Code",
+                    "taskCategory": "projects",
+                    "taskDate": "2023-06-15",
+                    "taskText": "in proress"
+                }]
+            } else {
+                currentUserTasks = task.tasks
+            }
+            console.log(currentUserTasks);
         }
     });
     return currentUserTasks;
 }
-
-

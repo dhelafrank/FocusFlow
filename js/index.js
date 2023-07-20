@@ -35,7 +35,7 @@ function taskFetching() {
 
     let allTasks = localStorage.getItem("currentUserTasks")
     setTimeout(() => {
-        sortTask(JSON.parse((allTasks)) || [])
+            sortTask(JSON.parse((allTasks)))
     }, 1000)
 }
 taskFetching()
@@ -88,7 +88,7 @@ function sortTask(allTasks) {
     var totalNumberOfTaskCompleted = findTotalNumberOfTaskCompleted()
     var allTasksTotal = allTasks.length
     // console.log(findPercentageOfTotalNumberOfTaskCompleted(allTasks));
-    let totalNumberOfTaskCompletedPercentage = findPercentageOfTotalNumberOfTaskCompleted(allTasks) || 30
+    let totalNumberOfTaskCompletedPercentage = findPercentageOfTotalNumberOfTaskCompleted(allTasks) || 1
 
     let taskInfo = {
         "dailyProgress": `${totalNumberOfTaskCompletedPercentage}`,
@@ -130,21 +130,21 @@ function currentScreenValidation(screen) {
 function quote() {
     let quoteText = ""
     let quoteAuthor = ""
-        fetch("https://type.fit/api/quotes", {
+    fetch("https://type.fit/api/quotes", {
             method: "GET",
         })
         .then(response => response.json())
         .then(data => {
-        // let quoteItself = data[Math.random()*(data.length - 2)+2]
-        let quoteItself = data[Math.floor(Math.random() * data.length)];
-        quoteText = quoteItself.text
-        quoteAuthor = quoteItself.author
+            // let quoteItself = data[Math.random()*(data.length - 2)+2]
+            let quoteItself = data[Math.floor(Math.random() * data.length)];
+            quoteText = quoteItself.text
+            quoteAuthor = quoteItself.author
 
-        function fillQoute(){
-            document.querySelector(".quote-text").innerHTML = quoteText
-            document.querySelector(".quote-author").innerHTML = quoteAuthor
-        }
-        fillQoute()
-    })
+            function fillQoute() {
+                document.querySelector(".quote-text").innerHTML = quoteText
+                document.querySelector(".quote-author").innerHTML = quoteAuthor
+            }
+            fillQoute()
+        })
 }
 quote()
