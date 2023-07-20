@@ -1,7 +1,7 @@
 export function load(state) {
     let loaderContainer = `<div class="circleLoaderContainer">
     <img src="/Asset/loaders/loader2.svg" alt="">
-    <h2 class="loader-message">Getting your tasks...</h2>
+    <h2 class="loader-message" style="text-align:center">Getting your tasks...</h2>
     <button class="btn-positive btn loaderbtn" onclick="location.reload()">Get Started</button>
 </div>`
 

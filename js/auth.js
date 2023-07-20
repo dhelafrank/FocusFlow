@@ -6,40 +6,46 @@ import {
 } from "/js/securityFunctions.js"
 
 import {
-    load
+    load,
+    customLoader
 } from "/js/loader.js";
 document.querySelector(".emailSignin").addEventListener("click", () => {
     emailSigninAnimation()
 })
 
 
-document.querySelector(".loginEmailButton").addEventListener("click", () => {
+document.querySelector(".loginEmailButton").addEventListener("click", (e) => {
     let siginEmailAddress = document.querySelector(".signinEmailField").value
     let signinPassword = document.querySelector(".signinPasswordField").value
-    emailSignin(siginEmailAddress, signinPassword)
+    emailSignin(siginEmailAddress, signinPassword, e)
+    e.target.innerHTML = "Signing in..."
 })
 
-function emailSignin(siginEmailAddress, signinPassword) {
+function emailSignin(siginEmailAddress, signinPassword, e) {
     let apiKey = ""
-    // alert("Signing In...")
+    let binID = ""
     fetch("/docs/auth.json", {
             method: "GET",
         })
         .then(response => response.json())
         .then(data => {
             apiKey = data.apiKey
-            proceedToLogin(siginEmailAddress, signinPassword, apiKey)
+            binID = data.userCreationBin
+            proceedToLogin(siginEmailAddress, signinPassword, apiKey, e)
         })
         .catch(error => console.error(error));
 
 
     function proceedToLogin(siginEmailAddress, signinPassword, apiKey) {
-        fetch("/docs/usersInfo.json", {
+        fetch(`https://api.jsonbin.io/v3/b/${binID}`, {
                 method: "GET",
+                headers: {
+                    "X-Master-Key": `${binID}`
+                }
             })
             .then(response => response.json())
             .then(data => {
-                let usersInfo = data
+                let usersInfo = data.record
 
                 function validateUser() {
                     usersInfo.forEach(user => {
@@ -49,7 +55,7 @@ function emailSignin(siginEmailAddress, signinPassword) {
                             localStorage.setItem("userAuth", true)
                             window.location.href = "/index.html"
                         }
-                        failedLogin()
+                        failedLogin(e)
                     });
                 }
                 validateUser()
@@ -58,7 +64,8 @@ function emailSignin(siginEmailAddress, signinPassword) {
     }
 }
 
-function failedLogin() {
+function failedLogin(e) {
+    e.target.innerHTML = "Sign in"
     document.querySelector(".signinPasswordField").value = ""
     document.querySelectorAll(".component-form-input").forEach(input => {
         input.style.border = ".5px solid red"
