@@ -35,7 +35,7 @@ function taskFetching() {
 
     let allTasks = localStorage.getItem("currentUserTasks")
     setTimeout(() => {
-        sortTask(JSON.parse((allTasks)))
+        sortTask(JSON.parse((allTasks)) || [])
     }, 1000)
 }
 taskFetching()
