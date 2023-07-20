@@ -26,7 +26,7 @@ export function load(state) {
 
         function accountError() {
             setTimeout(() => {
-                document.querySelector(".loader-message").innerHTML = "Your account was not set up properly, contact admin"
+                document.querySelector(".loader-message").innerHTML = "Your account was not set up properly, please contact admin"
                 document.querySelector(".loaderbtn").style.display = "none"
                 document.querySelector(".reset").style.display = "block"
             }, 7000);
