@@ -1,3 +1,6 @@
+import {
+    customLoader
+} from "/js/loader.js";
 //String to hex converter
 export const stringToHex = (str) => {
     let hex = '';
@@ -35,39 +38,40 @@ export function currentUserDetails() {
     return currentUser
 }
 
-export function currentUserTasks(suppliedID) {
+export async function currentUserTasks(suppliedID) {
     let currentUserTasks = ["T", "E", "S", "T"]
-    fetch("/docs/tasksDatabase.json", {
-            method: "GET",
-        }).then(response => response.json())
-        .then(
-            data => {
-                currentUserTasks = getTasks(data, suppliedID)
-                localStorage.setItem("currentUserTasks", JSON.stringify(currentUserTasks))
-            }
-        )
+    const response = await fetch("/docs/tasksDatabase.json", {
+        method: "GET",
+    })
+    const data = await response.json();
+    currentUserTasks = getTasks(data, suppliedID)
+    return currentUserTasks
+    // localStorage.setItem("currentUserTasks", JSON.stringify(currentUserTasks))
 }
 
 function getTasks(data, suppliedID) {
+
     data.forEach(task => {
         if (task.id == suppliedID) {
-            if (task.tasks == null || undefined) {
-                currentUserTasks = [{
-                    "taskTitle": "Fixing Some Bugs in Project Code",
-                    "taskCategory": "projects",
-                    "taskDate": "2023-06-15",
-                    "taskText": "in proress"
-                }, {
-                    "taskTitle": "Fixing Some Bugs in Project Code",
-                    "taskCategory": "projects",
-                    "taskDate": "2023-06-15",
-                    "taskText": "in proress"
-                }]
-            } else {
-                currentUserTasks = task.tasks
-            }
-            console.log(currentUserTasks);
+            // if (task.tasks == null || undefined || suppliedID) {
+            // currentUserTasks = [{
+            //     "taskTitle": "Fixing Some Bugs in Project Code",
+            //     "taskCategory": "projects",
+            //     "taskDate": "2023-06-15",
+            //     "taskText": "in proress"
+            // }, {
+            //     "taskTitle": "Fixing Some Bugs in Project Code",
+            //     "taskCategory": "projects",
+            //     "taskDate": "2023-06-15",
+            //     "taskText": "in proress"
+            // }]
+            // } else {
+            currentUserTasks = task.tasks
+            // }
+        } else {
+            currentUserTasks = false
         }
+
     });
     return currentUserTasks;
 }

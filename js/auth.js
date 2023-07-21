@@ -37,7 +37,11 @@ function emailSignin(siginEmailAddress, signinPassword, e) {
 
 
     function proceedToLogin(siginEmailAddress, signinPassword, apiKey) {
+        //Production
         fetch(`https://api.jsonbin.io/v3/b/${binID}`, {
+
+            // Local Development Only
+            // fetch(`/docs/usersInfo.json`, {
                 method: "GET",
                 headers: {
                     "X-Master-Key": `${binID}`
@@ -45,7 +49,11 @@ function emailSignin(siginEmailAddress, signinPassword, e) {
             })
             .then(response => response.json())
             .then(data => {
+                //Production
                 let usersInfo = data.record
+
+                //Local Development Only
+                // let usersInfo = data
                 function validateUser() {
                     usersInfo.forEach(user => {
                         if (user.email == siginEmailAddress && user.password == stringToHex(signinPassword)) {
@@ -59,7 +67,10 @@ function emailSignin(siginEmailAddress, signinPassword, e) {
                 }
                 validateUser(usersInfo)
             })
-            .catch(error => console.error(error));
+            .catch((error)=>{
+                e.target.innerHTML = "Connection Failed"
+                console.error(error);
+            });
     }
 }
 

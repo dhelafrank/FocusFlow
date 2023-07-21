@@ -19,24 +19,26 @@ import {
 } from "/js/securityFunctions.js";
 
 import {
-    load
+    load,
+    customLoader
 } from "/js/loader.js";
 
 import {
     colors
 } from "/js/theme.js"
 colors()
-load(true)
 
-
-// This function needs to be fixed
-function taskFetching() {
-    currentUserTasks(`${currentUserDetails().taskID.toLowerCase()}`)
-
-    let allTasks = localStorage.getItem("currentUserTasks")
-    setTimeout(() => {
-            sortTask(JSON.parse((allTasks)))
-    }, 1000)
+async function taskFetching() {
+    let taskID = JSON.parse(localStorage.getItem("currentUser")).taskID.toLowerCase()
+    // console.log(JSON.parse(localStorage.getItem("currentUser")).taskID.toLowerCase());
+    let allTasks = await currentUserTasks(taskID)
+    if (allTasks != false) {
+        sortTask(await allTasks)
+        load(true)
+    } else {
+        customLoader("You have not created any tasks yet", true, 0, newTask, "Create your first task")
+        console.log('No tasks found for this user')
+    }
 }
 taskFetching()
 
@@ -148,3 +150,6 @@ function quote() {
         })
 }
 quote()
+function newTask() {
+    console.log("Creating...");
+}

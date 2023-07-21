@@ -9,8 +9,8 @@ body{
     border-radius: auto 15px 15px 15px;
     overflow: hidden;
     background: url("/Asset/imgPlaceholder.webp");
-    box-shadow: 0px -10px 10px 0px var(--background) inset;
-    background-attachment: fixed;
+    /* box-shadow: 0px -10px 10px 0px var(--background) inset; */
+    /* background-attachment: fixed; */
 }
 .blogTitleContainer, .blogContentContainer{
     padding-left: 1rem;
