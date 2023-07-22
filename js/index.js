@@ -22,19 +22,26 @@ import {
     load,
     customLoader
 } from "/js/loader.js";
+
 import {
     colors
 } from "/js/theme.js"
+
 import {
     addTaskForm
 } from "/js/script.js";
+
+import {
+    processDatabaseCreation
+} from "/js/createNewTaskDatabase.js";
+
 colors()
 
 async function taskFetching() {
     let taskID = JSON.parse(localStorage.getItem("currentUser")).taskID.toLowerCase()
     // console.log(JSON.parse(localStorage.getItem("currentUser")).taskID.toLowerCase());
     let allTasks = await currentUserTasks(taskID)
-    
+
     if (allTasks != false) {
         sortTask(await allTasks)
         load(true)
@@ -155,7 +162,13 @@ function quote() {
 quote()
 
 function newTask() {
+    let taskID = JSON.parse(localStorage.getItem("currentUser")).taskID.toLowerCase()
     console.log("Creating...");
+    let newDB = {
+        "id": `${taskID}`,
+        "tasks": [{}]
+    }
+    processDatabaseCreation(newDB)
     customLoader()
     addTaskForm(document.querySelector(".newTaskDivContainer"), document.querySelector(".loaderbtn"))
 }
