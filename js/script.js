@@ -74,10 +74,27 @@ backBtn.forEach(icon => {
     })
 })
 
+let currentDate = ""
+let currentTime = ""
+function getCurrentDateTime() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    const hours = String(today.getHours()).padStart(2, '0');
+    const minutes = String(today.getMinutes()).padStart(2, '0');
+
+    const nowCurrentDate = `${year}-${month}-${day}`
+    const nowCurrentTime = `${hours}:${minutes}`;
+    currentDate = nowCurrentDate
+    currentTime = nowCurrentTime
+}
+getCurrentDateTime()
+
 let newTaskForm = `
 <div class="newTaskDivContainer">
     <div class="component-grey-card newTaskDiv">
-        <h1>Create New Task</h1>
+        <h3>Create New Task</h3>
         <input type="text" class="newTaskTitle component-grey-input" placeholder="What would you love to do?">
         <select name="" id="newTaskCategory" class="newTaskCategory">
             <option value="">-- Select Category --</option>
@@ -86,8 +103,8 @@ let newTaskForm = `
             <option value="project">Projects</option>
             <option value="extras">Extras</option>
         </select>
-        <label class="newTaskDateContainer">Task Completion Date and Time<br><input type="date" class="newTaskDate"><br><input type="time" class="newTaskTime"></label>
-        <textarea name="" id="" cols="30" rows="10" maxlength="256" class="newTaskNote" placeholder=" Additional text goes here..."></textarea>
+        <label class="newTaskDateContainer">Task Completion Date and Time<br><input type="date" class="newTaskDate" value="${currentDate}"><br><input type="time" class="newTaskTime" value="${currentTime}"></label>
+        <textarea name="" id="" cols="30" rows="5" maxlength="256" class="newTaskNote" placeholder=" Additional text goes here..."></textarea>
         <button class="btn create-task-btn btn-positive"> Create Task</button>
     </div>
 </div>`
@@ -128,7 +145,7 @@ export function addTaskForm(newTaskContainer, icon) {
     setTimeout(() => {
         newTaskContainer.style.opacity = "1";
     }, 1)
-    document.querySelector(".create-task-btn").addEventListener("click", (e)=>{
+    document.querySelector(".create-task-btn").addEventListener("click", (e) => {
         createNewTask(e)
     })
     // document.getElementById("create-task-btn").addEventListener("click", createNewTask)
