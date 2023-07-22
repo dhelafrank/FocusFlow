@@ -285,7 +285,7 @@ footer .fa-solid:active {
 }
 .circleLoaderContainer img{
     width: 50%;
-    margin-left: 7rem;
+    margin-left: 20vw;
 }
 .circleLoaderContainer button{
     display: none;
