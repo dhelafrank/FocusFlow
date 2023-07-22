@@ -75,19 +75,20 @@ let newTaskForm = `
 <div class="newTaskDivContainer">
     <div class="component-grey-card newTaskDiv">
         <h1>Create New Task</h1>
-        <input type="text" class="taskTitle component-grey-input" placeholder="What would you love to do?">
-        <select name="" id="taskCategory">
+        <input type="text" class="newTaskTitle component-grey-input" placeholder="What would you love to do?">
+        <select name="" id="newTaskCategory" class="newTaskCategory">
             <option value="">-- Select Category --</option>
             <option value="books">Books</option>
             <option value="assignments">Assignments</option>
             <option value="project">Projects</option>
             <option value="extra">Extras</option>
         </select>
-        <input type="date" class="newTaskDate">
-        <textarea name="" id="" cols="30" rows="10" maxlength="256"> Additional text goes here...</textarea>
-        <button class="btn create-task btn-positive"> Create Task</button>
+        <label class="newTaskDateContainer">Task Completion Date and Time<br><input type="date" class="newTaskDate"><br><input type="time" class="newTaskTime"></label>
+        <textarea name="" id="" cols="30" rows="10" maxlength="256" class="newTaskNote" placeholder=" Additional text goes here..."></textarea>
+        <button class="btn create-task-btn btn-positive"> Create Task</button>
     </div>
 </div>`
+
 
 
 newTaskButton.forEach(icon => {
@@ -115,7 +116,8 @@ function removeTaskForm(newTaskContainer, icon) {
     }
 }
 
-function addTaskForm(newTaskContainer, icon) {
+
+export function addTaskForm(newTaskContainer, icon) {
     icon.style = `transform: rotate(45deg);`
     document.body.insertAdjacentHTML("afterbegin", newTaskForm);
     newTaskContainer = document.querySelector(".newTaskDivContainer")
@@ -123,10 +125,11 @@ function addTaskForm(newTaskContainer, icon) {
     setTimeout(() => {
         newTaskContainer.style.opacity = "1";
     }, 1)
-    // window.addEventListener("scroll", () => {
-    //     removeTaskForm(newTaskContainer)
-    // })
+    document.querySelector(".create-task-btn").addEventListener("click", createNewTask)
+    // document.getElementById("create-task-btn").addEventListener("click", createNewTask)
 }
+
+
 
 
 export function progressAnimation(elementSelector, widthInPercentage) {
@@ -146,14 +149,80 @@ document.getElementsByTagName('head')[0].appendChild(theme)
 
 
 
-setInterval(()=>{
+setInterval(() => {
     if (document.title.toLowerCase().includes("auth")) {
         userStat(true)
-       }
-       else{
-           userStat()
-       }
-},500)
+    } else {
+        userStat()
+    }
+}, 500)
+
+function createNewTask() {
+    let newTaskTitle = document.querySelector(".newTaskTitle").value
+    let newTaskCategory = document.querySelector(".newTaskCategory").value
+    let newTaskDate = document.querySelector(".newTaskDate").value
+    let newTaskTime = document.querySelector(".newTaskTime").value
+    let newTaskNote = document.querySelector(".newTaskNote").value
+    const newTaskID = new Date().getTime();
+
+    let NewTask = {
+        "taskTitle": `${newTaskTitle}`,
+        "taskCategory": `${newTaskCategory}`,
+        "taskDate": `${newTaskDate}`,
+        "taskTime": `${newTaskTime}`,
+        "taskID": `${newTaskID}`,
+        "taskText": `${newTaskNote || ""}`
+    }
+    // console.log(NewTask);
+    // console.log(taskSeconds);
+    insertTask(NewTask)
+}
+
+function insertTask(NewTask){
+alert(NewTask)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -179,15 +248,6 @@ setInterval(()=>{
 // else{
 //     console.error("Error Loading Themes");
 // }
-
-
-
-
-
-
-
-
-
 // // Firebase
 // // Import the functions you need from the SDKs you need
 //   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";

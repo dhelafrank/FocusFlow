@@ -22,16 +22,19 @@ import {
     load,
     customLoader
 } from "/js/loader.js";
-
 import {
     colors
 } from "/js/theme.js"
+import {
+    addTaskForm
+} from "/js/script.js";
 colors()
 
 async function taskFetching() {
     let taskID = JSON.parse(localStorage.getItem("currentUser")).taskID.toLowerCase()
     // console.log(JSON.parse(localStorage.getItem("currentUser")).taskID.toLowerCase());
     let allTasks = await currentUserTasks(taskID)
+    
     if (allTasks != false) {
         sortTask(await allTasks)
         load(true)
@@ -150,6 +153,9 @@ function quote() {
         })
 }
 quote()
+
 function newTask() {
     console.log("Creating...");
+    customLoader()
+    addTaskForm(document.querySelector(".newTaskDivContainer"), document.querySelector(".loaderbtn"))
 }

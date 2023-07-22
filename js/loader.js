@@ -61,6 +61,7 @@ export function customLoader(loaderMessage, state, duration, functionName, btnMe
 </div>`
 
     if (state == true) {
+        document.body.style.overflow = "hidden"
         document.body.insertAdjacentHTML("afterbegin", loaderContainer)
         document.querySelector(".loaderbtn").addEventListener("click", functionName)
         setTimeout(() => {

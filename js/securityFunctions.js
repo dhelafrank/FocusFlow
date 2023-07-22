@@ -53,25 +53,10 @@ function getTasks(data, suppliedID) {
 
     data.forEach(task => {
         if (task.id == suppliedID) {
-            // if (task.tasks == null || undefined || suppliedID) {
-            // currentUserTasks = [{
-            //     "taskTitle": "Fixing Some Bugs in Project Code",
-            //     "taskCategory": "projects",
-            //     "taskDate": "2023-06-15",
-            //     "taskText": "in proress"
-            // }, {
-            //     "taskTitle": "Fixing Some Bugs in Project Code",
-            //     "taskCategory": "projects",
-            //     "taskDate": "2023-06-15",
-            //     "taskText": "in proress"
-            // }]
-            // } else {
             currentUserTasks = task.tasks
-            // }
         } else {
             currentUserTasks = false
         }
-
     });
     return currentUserTasks;
 }

@@ -35,14 +35,14 @@ input[type="text"] {
     text-align: center;
 }
 
-.taskTitle::placeholder {
-    color: rgba(255, 255, 255, 0.349);
+.newTaskTitle::placeholder {
+    color: #ffffff;
 }
 
-.taskTitle::placeholder,
-.taskTitle:-ms-input-placeholder {
+.newTaskTitle::placeholder,
+.newTaskTitle:-ms-input-placeholder {
     opacity: 1;
-    color: rgba(255, 255, 255, 0.459);
+    color: #ffffff;
 }
 
 select {
@@ -57,7 +57,18 @@ select {
     text-align: center;
 }
 
-input[type="date"] {
+input[type="date"],input[type="time"]{
+    width: 70%;
+    height: 3rem;
+    border-radius: 15px;
+    border: none;
+    background: var(--shade-two);
+    outline: none;
+    font-size: 1.2rem;
+    /* display: none; */
+    color: white;
+}
+/* input[type="time"]{
     width: 50%;
     height: 3rem;
     border-radius: 15px;
@@ -65,9 +76,19 @@ input[type="date"] {
     background: var(--shade-two);
     outline: none;
     font-size: 1.2rem;
+    display: none;
     color: white;
-}
+} */
+.newTaskDivContainer label{
+    /* border: 1px dashed var(--main-color); */
+    border-radius: 1px;
+    padding: 1em;
+    background: var(--shade-two);
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
 
+}
 textarea {
     width: 85%;
     padding: 1em;
@@ -80,7 +101,10 @@ textarea {
     font-size: 1.2rem;
     font-family: 'poppins', sans-serif;
 }
-
+.newTaskNote::placeholder{
+    color: #fff;
+    opacity: 1;
+}
 button {
     margin-top: 5rem;
     padding-left: 2rem;
