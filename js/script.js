@@ -19,6 +19,9 @@ import {
     userStat
 } from "/js/securityFunctions.js"
 
+import {
+    insertTask
+} from "/js/insertNewTask.js"
 
 newTaskButton.forEach(icon => {
     setIcon(icon, "home")
@@ -81,7 +84,7 @@ let newTaskForm = `
             <option value="books">Books</option>
             <option value="assignments">Assignments</option>
             <option value="project">Projects</option>
-            <option value="extra">Extras</option>
+            <option value="extras">Extras</option>
         </select>
         <label class="newTaskDateContainer">Task Completion Date and Time<br><input type="date" class="newTaskDate"><br><input type="time" class="newTaskTime"></label>
         <textarea name="" id="" cols="30" rows="10" maxlength="256" class="newTaskNote" placeholder=" Additional text goes here..."></textarea>
@@ -125,7 +128,9 @@ export function addTaskForm(newTaskContainer, icon) {
     setTimeout(() => {
         newTaskContainer.style.opacity = "1";
     }, 1)
-    document.querySelector(".create-task-btn").addEventListener("click", createNewTask)
+    document.querySelector(".create-task-btn").addEventListener("click", (e)=>{
+        createNewTask(e)
+    })
     // document.getElementById("create-task-btn").addEventListener("click", createNewTask)
 }
 
@@ -157,7 +162,8 @@ setInterval(() => {
     }
 }, 500)
 
-function createNewTask() {
+function createNewTask(e) {
+    e.target.innerHTML = "Creating..."
     let newTaskTitle = document.querySelector(".newTaskTitle").value
     let newTaskCategory = document.querySelector(".newTaskCategory").value
     let newTaskDate = document.querySelector(".newTaskDate").value
@@ -176,10 +182,6 @@ function createNewTask() {
     // console.log(NewTask);
     // console.log(taskSeconds);
     insertTask(NewTask)
-}
-
-function insertTask(NewTask){
-alert(NewTask)
 }
 
 

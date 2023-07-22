@@ -45,6 +45,7 @@ async function taskFetching() {
     if (allTasks != false) {
         sortTask(await allTasks)
         load(true)
+        localStorage.setItem("currentUserTask", JSON.stringify(allTasks))
     } else {
         customLoader("You have not created any tasks yet", true, 0, newTask, "Create your first task")
         console.log('No tasks found for this user')
