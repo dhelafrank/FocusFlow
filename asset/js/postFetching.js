@@ -58,7 +58,7 @@ function loadBlog(targetTopic){
       localStorage.setItem("postObject", JSON.stringify(allPosts[i]))
     }
   }
-  window.location.href = "/post.html"
+  window.location.href = "/post"
 }
 
 // function loadFromImage(e){
@@ -70,5 +70,5 @@ function loadBlog(targetTopic){
 //     }
 //   }
 //   console.log((e.target.querySelector(".blogHeading").innerText))
-//   window.location.href = "/post.html"
+//   window.location.href = "/post"
 // }

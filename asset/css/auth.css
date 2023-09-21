@@ -15,7 +15,7 @@
 }
 
 .container h1 {
-    font-size: 300%;
+    font-size: 200%;
     /* font-size:clamp(2rem, 5vw + 5rem, 3rem); */
 
     text-align: left;
@@ -35,12 +35,13 @@ body {
 
 img {
     /* z-index: -1; */
+    width: 80vw;
     transition: ease-in-out 1s all;
 }
 
 .btn {
     width: 80vw;
-    height: 7vh;
+    height: 5vh;
     border-radius: 2rem;
 }
 

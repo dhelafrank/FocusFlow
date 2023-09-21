@@ -60,7 +60,7 @@ function emailSignin(siginEmailAddress, signinPassword, e) {
                             customLoader("Standby...", true)
                             localStorage.setItem("currentUser", JSON.stringify(user))
                             localStorage.setItem("userAuth", true)
-                            window.location.href = "/index.html"
+                            window.location.href = "/index"
                         }
                         failedLogin(e)
                     });
@@ -88,6 +88,6 @@ function failedLogin(e) {
 document.querySelector(".noAccountLink").addEventListener("click", (e) => {
     e.target.style.color = "#45c930"
     setTimeout(() => {
-        window.location.href = "/signup.html"
+        window.location.href = "/signup"
     }, 500);
 })

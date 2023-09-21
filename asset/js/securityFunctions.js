@@ -24,7 +24,7 @@ export function userStat(halt) {
     function check() {
         if (localStorage.getItem("userAuth") !== "true") {
             console.error("You Must Login First")
-            window.location.href = "/auth.html"
+            window.location.href = "/auth"
         } else {
             return;
         }

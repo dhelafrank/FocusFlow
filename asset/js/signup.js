@@ -146,7 +146,7 @@ function proceedToLogin(){
     <span class="emphasy">Let's get you FOCUSED</span>
     `
     document.querySelector(".reSigninButton").addEventListener("click", () => {
-        window.location.href = "/auth.html"
+        window.location.href = "/auth"
     })
     document.querySelector(".reSigninButton").style.display = "block"
 }

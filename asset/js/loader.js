@@ -41,7 +41,7 @@ export function load(state) {
 
                 document.querySelector(".reset").addEventListener("click", () => {
                     localStorage.clear()
-                    window.location.href = "/auth.html"
+                    window.location.href = "/auth"
                 })
             }, 8000);
         }

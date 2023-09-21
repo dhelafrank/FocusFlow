@@ -43,7 +43,7 @@ document.querySelectorAll(".fa-bell").forEach(icon => {
 historyNavIcon.forEach(icon => {
     setIcon(icon, "log")
     icon.addEventListener("click", () => {
-        window.location.href = "/history.html"
+        window.location.href = "/history"
     })
 })
 
@@ -63,7 +63,7 @@ homeIcon.forEach(icon => {
 
 userAvatar.forEach(icon => {
     icon.addEventListener("click", () => {
-        window.location.href = "/profile.html"
+        window.location.href = "/profile"
     })
 })
 

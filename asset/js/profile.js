@@ -8,7 +8,7 @@ document.querySelector(".userEmail").innerHTML = currentUserDetails().email
 
 document.querySelector(".logout").addEventListener("click", ()=>{
     localStorage.clear()
-    window.location.href = "/auth.html"
+    window.location.href = "/auth"
 })
 
 

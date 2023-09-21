@@ -77,7 +77,7 @@ progressCards.forEach(card => {
     card.addEventListener("click", (e) => {
         let categoryName = card.querySelector(".CardCategoryName").innerHTML.toLowerCase()
         sessionStorage.setItem("categoryName", categoryName)
-        window.location.href = "/taskCategory.html"
+        window.location.href = "/taskCategory"
     })
 })
 
