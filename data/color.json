@@ -1,0 +1,15 @@
+
+{
+    "mainColor":"#1e90ff;",
+    "background":"#1a1a1a;",
+    "primaryPurple": "#bc62ff;",
+    "primaryYellow":"#ffab1e;",
+    "primaryGreen":"#45c930;",
+    "primaryLightGreen":"#82fc67;",
+    "darkShade":"#1a1a1a;",
+    "shadeThree":"#4f4f4f;",
+    "iconFade":"#1e90ff55",
+    "shadeTwo":"#7f7f7f;",
+    "shadeOne":"#c1c1c1;",
+    "mainColorActive":"#157ce2;"
+}

@@ -1,0 +1,143 @@
+[
+    {
+      "taskTitle": "Fixing Some Bugs in Project Code",
+      "taskCategory": "Projects",
+      "taskDate": "2023-06-15",
+      "taskText": "in progress",
+      "taskUserID": 13419
+    },
+    {
+      "taskTitle": "Research for Assignment",
+      "taskCategory": "Assignment",
+      "taskDate": "2023-07-05",
+      "taskText": "not started",
+      "taskUserID": 12459
+    },
+    {
+      "taskTitle": "Read a New Book",
+      "taskCategory": "Books",
+      "taskDate": "2023-08-20",
+      "taskText": "completed",
+      "taskUserID": 13419
+    },
+    {
+      "taskTitle": "Extra Task",
+      "taskCategory": "Extras",
+      "taskDate": "2023-09-10",
+      "taskText": "in progress",
+      "taskUserID": 12459
+    },
+    {
+      "taskTitle": "Work on Personal Project",
+      "taskCategory": "Projects",
+      "taskDate": "2023-07-30",
+      "taskText": "in progress",
+      "taskUserID": 13419
+    },
+    {
+      "taskTitle": "Study for Final Exam",
+      "taskCategory": "Assignment",
+      "taskDate": "2023-07-18",
+      "taskText": "in progress",
+      "taskUserID": 12459
+    },
+    {
+      "taskTitle": "Visit the Library",
+      "taskCategory": "Books",
+      "taskDate": "2023-09-05",
+      "taskText": "not started",
+      "taskUserID": 13419
+    },
+    {
+      "taskTitle": "Exercise",
+      "taskCategory": "Extras",
+      "taskDate": "2023-07-25",
+      "taskText": "completed",
+      "taskUserID": 12459
+    },
+    {
+      "taskTitle": "Project Presentation",
+      "taskCategory": "Projects",
+      "taskDate": "2023-08-10",
+      "taskText": "in progress",
+      "taskUserID": 13419
+    },
+    {
+      "taskTitle": "Write a Report",
+      "taskCategory": "Assignment",
+      "taskDate": "2023-09-15",
+      "taskText": "not started",
+      "taskUserID": 12459
+    },
+    {
+      "taskTitle": "Learn a New Programming Language",
+      "taskCategory": "Extras",
+      "taskDate": "2023-10-02",
+      "taskText": "in progress",
+      "taskUserID": 13419
+    },
+    {
+      "taskTitle": "Create a Project Plan",
+      "taskCategory": "Projects",
+      "taskDate": "2023-06-25",
+      "taskText": "completed",
+      "taskUserID": 12459
+    },
+    {
+      "taskTitle": "Submit Homework",
+      "taskCategory": "Assignment",
+      "taskDate": "2023-07-12",
+      "taskText": "completed",
+      "taskUserID": 13419
+    },
+    {
+      "taskTitle": "Read a Science Fiction Novel",
+      "taskCategory": "Books",
+      "taskDate": "2023-08-30",
+      "taskText": "in progress",
+      "taskUserID": 12459
+    },
+    {
+      "taskTitle": "Attend a Workshop",
+      "taskCategory": "Extras",
+      "taskDate": "2023-09-20",
+      "taskText": "not started",
+      "taskUserID": 13419
+    },
+    {
+      "taskTitle": "Code Review",
+      "taskCategory": "Projects",
+      "taskDate": "2023-07-08",
+      "taskText": "completed",
+      "taskUserID": 12459
+    },
+    {
+      "taskTitle": "Prepare a Presentation",
+      "taskCategory": "Assignment",
+      "taskDate": "2023-08-15",
+      "taskText": "in progress",
+      "taskUserID": 13419
+    },
+    {
+      "taskTitle": "Practice Music",
+      "taskCategory": "Extras",
+      "taskDate": "2023-10-10",
+      "taskText": "not started",
+      "taskUserID": 12459
+    },
+    {
+      "taskTitle": "Design a Website",
+      "taskCategory": "Projects",
+      "taskDate": "2023-06-30",
+      "taskText": "completed",
+      "taskUserID": 13419
+    },
+    {
+      "taskTitle": "Write a Short Story",
+      "taskCategory": "Extras",
+      "taskDate": "2023-09-25",
+      "taskText": "in progress",
+      "taskUserID": 12459
+    }
+  ]
+  

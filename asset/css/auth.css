@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root{
-    /* font-size: 15px; */
 }
 .auth-body {
     position: relative;
@@ -8,19 +7,12 @@
 }
 
 .container {
-/* position: absolute; */
-/* bottom: -0px; */
-/* left: 0; */
-/* right: 0; */
 }
 
 .container h1 {
     font-size: 200%;
-    /* font-size:clamp(2rem, 5vw + 5rem, 3rem); */
-
     text-align: left;
     width: 80vw;
-    /* line-height: 4rem; */
     margin: 0;
     margin-left: 3rem;
     padding: 0;
@@ -34,7 +26,6 @@ body {
 }
 
 img {
-    /* z-index: -1; */
     width: 80vw;
     transition: ease-in-out 1s all;
 }

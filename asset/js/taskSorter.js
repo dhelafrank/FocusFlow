@@ -7,7 +7,6 @@ export function findNumberOfTaskPerCategory(categoryName, allTasks){
             count++;
         }
     });
-
     return count;
 }
 

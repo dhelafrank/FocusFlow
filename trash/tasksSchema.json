@@ -1,0 +1,92 @@
+[{
+        "taskTitle": "Fixing Some Bugs in Project Code",
+        "taskCategory": "projects",
+        "taskDate": "2023-06-15",
+        "taskText": "in proress"
+    },
+    {
+        "taskTitle": "Completing Assignment Questions",
+        "taskCategory": "assignments",
+        "taskDate": "2023-06-15",
+        "taskText": "in proress"
+    },
+    {
+        "taskTitle": "Implementing User Authentication",
+        "taskCategory": "projects",
+        "taskDate": "2023-07-01",
+        "taskText": "Dummy task text for Project 1"
+    },
+    {
+        "taskTitle": "Refactoring Codebase",
+        "taskCategory": "projects",
+        "taskDate": "2023-06-28",
+        "taskText": "Dummy task text for Project 2"
+    },
+    {
+        "taskTitle": "Adding New Feature",
+        "taskCategory": "projects",
+        "taskDate": "2023-06-30",
+        "taskText": "Dummy task text for Project 3"},
+    {
+        "taskTitle": "Researching Machine Learning Algorithms",
+        "taskCategory": "assignments",
+        "taskDate": "2023-06-25",
+        "taskText": "Dummy task text for Assignment 1",
+        "status": "completed"
+    },
+    {
+        "taskTitle": "Writing Essay on Climate Change",
+        "taskCategory": "assignments",
+        "taskDate": "2023-07-03",
+        "taskText": "Dummy task text for Assignment 2",
+        "status": "completed"
+    },
+    {
+        "taskTitle": "Preparing Presentation on World History",
+        "taskCategory": "assignments",
+        "taskDate": "2023-06-27",
+        "taskText": "Dummy task text for Assignment 3",
+        "status": "completed"
+    },
+    {
+        "taskTitle": "Planning Office Outing",
+        "taskCategory": "extras",
+        "taskDate": "2023-07-05",
+        "taskText": "Dummy task text for Extra 2",
+        "status": "completed"
+    },
+    {
+        "taskTitle": "Organizing Team Building Activity",
+        "taskCategory": "extras",
+        "taskDate": "2023-06-30",
+        "taskText": "Dummy task text for Extra 1",
+        "status": "completed"
+    },
+    {
+        "taskTitle": "Arranging Guest Speaker for Seminar",
+        "taskCategory": "extras",
+        "taskDate": "2023-06-26",
+        "taskText": "Dummy task text for Extra 3"
+    },
+    {
+        "taskTitle": "Reading 'Sapiens: A Brief History of Humankind'",
+        "taskCategory": "books",
+        "taskDate": "2023-07-05",
+        "taskText": "Dummy task text for Book 1",
+        "status": "completed"
+    },
+    {
+        "taskTitle": "Studying 'The Great Gatsby'",
+        "taskCategory": "books",
+        "taskDate": "2023-06-29",
+        "taskText": "Dummy task text for Book 2",
+        "status": "completed"
+    },
+    {
+        "taskTitle": "Exploring 'The Power of Now'",
+        "taskCategory": "books",
+        "taskDate": "2023-06-30",
+        "taskText": "Dummy task text for Book 3"
+    }
+
+]

@@ -1,0 +1,24 @@
+[{
+    "name":"John Doe",
+    "email":"johndoe@email.com",
+    "id":12459,
+    "taskID":"30AB",
+    "avatar":"",
+    "password":"6a6f686e646f65697479"
+},
+{
+    "name":"Foo Bar",
+    "email":"foobar@email.com",
+    "id":13419,
+    "taskID":"346B",
+    "avatar":"",
+    "password": "666f6f62617273697479"
+},
+{
+    "name":"Rizz Bender",
+    "email":"dhelaf6@gmail.com",
+    "id":13419,
+    "taskID":"32b9",
+    "avatar":"",
+    "password": "666f6f646965"
+}]

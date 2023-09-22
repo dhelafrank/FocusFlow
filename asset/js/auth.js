@@ -60,7 +60,7 @@ function emailSignin(siginEmailAddress, signinPassword, e) {
                             customLoader("Standby...", true)
                             localStorage.setItem("currentUser", JSON.stringify(user))
                             localStorage.setItem("userAuth", true)
-                            window.location.href = "/index"
+                            window.location.href = "/"
                         }
                         failedLogin(e)
                     });
