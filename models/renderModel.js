@@ -3,11 +3,12 @@ const path = require("path");
 class RenderModel {
   constructor(app) {
     this.app = app;
+    this.viewsDirectory = path.join(__dirname, "../views");
   }
 
   renderView(viewName, data) {
-    return (req, res) => {
-      res.render(viewName, data);
+    return (req, res) => { 
+      res.render(path.join(this.viewsDirectory, viewName), data);
     };
   }
 
