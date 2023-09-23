@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middlewares
 app.set("view engine", "ejs");
-app.use(express.static("asset"));
+app.use(express.static(path.join(__dirname,"asset")));
 
 
 const renderModel = new RenderModel(app);
